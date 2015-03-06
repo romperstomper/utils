@@ -1,0 +1,5 @@
+alias sagi='sudo apt-get install -y'
+alias f='nautilus smb://192.168.1.36'
+alias s='source ~/.bashrc'
+alias ll='ls -la'
+alias tt='ls -lrt'
