@@ -5,6 +5,7 @@ Glug codefmt-google auto_filetypes+=blazebuild
 syntax on
 set ruler
 filetype plugin indent on    " required
+set pastetoggle=<insert>
 
 
 " Google vim useful stuff -- https://wiki.corp.google.com/twiki/bin/view/Main/VimEditor
