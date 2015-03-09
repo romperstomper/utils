@@ -1,7 +1,4 @@
 set nocompatible
-source /usr/share/vim/google/google.vim  " Initialize some basic settings.
-Glug youcompleteme-google
-Glug codefmt-google auto_filetypes+=blazebuild
 syntax on
 set ruler
 filetype plugin indent on    " required
@@ -33,14 +30,7 @@ au InsertLeave * hi statusline guibg=green
 " default the statusline to green when entering Vim
 hi statusline guibg=green
 
-
-
-
-
-
-
 syntax on
-source /usr/share/vim/google/google.vim
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
