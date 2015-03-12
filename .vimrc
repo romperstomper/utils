@@ -5,9 +5,6 @@ Glug codefmt-google auto_filetypes+=blazebuild
 syntax on
 set ruler
 filetype plugin indent on    " required
-set pastetoggle=<insert>
-
-
 " Google vim useful stuff -- https://wiki.corp.google.com/twiki/bin/view/Main/VimEditor
 " first, enable status line always
 " w set it up to change the status line based on mode
@@ -33,20 +30,10 @@ au InsertLeave * hi statusline guibg=green
 " default the statusline to green when entering Vim
 hi statusline guibg=green
 
-
-
-
-
-
-
 syntax on
 source /usr/share/vim/google/google.vim
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-
-" my own from here on
-
-" use 256 colors (must be supported by xterm and screen)
 set t_Co=256
 set background=dark
 set ignorecase
