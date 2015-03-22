@@ -3,12 +3,14 @@ syntax on
 set ruler
 filetype plugin indent on    " required
 set pastetoggle=<insert>
-hi statusline guibg=green
+set shiftwidth=2
+set softtabstop=2
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 " use 256 colors (must be supported by xterm and screen)
+>>>>>>> 9e17bf393d8a6a3e22f1a62a73bdcf6190f2afb7
 set t_Co=256
 set background=dark
 set ignorecase
