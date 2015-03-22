@@ -10,13 +10,13 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 " use 256 colors (must be supported by xterm and screen)
->>>>>>> 9e17bf393d8a6a3e22f1a62a73bdcf6190f2afb7
 set t_Co=256
 set background=dark
 set ignorecase
 set ls=2
 set mouse=a
 set number
+autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 
 
 if has("autocmd")
   autocmd BufReadPost *
