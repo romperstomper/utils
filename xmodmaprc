@@ -1,0 +1,6 @@
+#chromebook: add control to search key
+remove mod4 = Super_L
+keycode 133 = Control_L
+add control = Control_L
+
+
