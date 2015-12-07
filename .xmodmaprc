@@ -1,8 +1,0 @@
-remove mod4 = Super_L
-keycode 133 = Control_L
-add control = Control_L
-remove mod1 = Alt_R
-keycode 108 = Super_L
-add mod4 = Super_L
-
-
