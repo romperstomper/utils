@@ -1,5 +1,6 @@
 # .bashrc
-alias g4m='g4 lint && g4 mail'
+alias o='ssh osmc@192.168.1.148'
+alias e='~/eclipse/eclipse'
 alias edit='vim'
 alias ll='ls -la'
 alias tt='ls -lrt'
@@ -11,3 +12,4 @@ shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
 alias tmux="export TERM=screen-256color && tmux"
+export PYTHONSTARTUP=~/.pythonrc
