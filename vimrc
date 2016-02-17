@@ -12,6 +12,7 @@ match OverLength /\%81v.\+/
 " use 256 colors (must be supported by xterm and screen)
 set t_Co=256
 set background=dark
+colorscheme tomorrow-night
 set ignorecase
 set ls=2
 set mouse=a
