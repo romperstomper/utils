@@ -5,6 +5,10 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
+imap jj <Esc>
+imap ;; <esc>:w<cr>
+nmap ;; <esc>:w<cr>
+colorscheme tomorrow-night
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
@@ -12,7 +16,6 @@ match OverLength /\%81v.\+/
 " use 256 colors (must be supported by xterm and screen)
 set t_Co=256
 set background=dark
-colorscheme tomorrow-night
 set ignorecase
 set ls=2
 set mouse=a
