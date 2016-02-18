@@ -9,6 +9,8 @@ imap jj <Esc>
 imap ;; <esc>:w<cr>
 nmap ;; <esc>:w<cr>
 colorscheme tomorrow-night
+cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
+
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
