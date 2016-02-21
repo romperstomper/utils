@@ -7,6 +7,8 @@ set shiftwidth=2
 set softtabstop=2
 imap jj <Esc>
 imap ;; <esc>:w<cr>
+imap xx <esc>:x<cr>
+nmap xx <esc>:x<cr>
 nmap ;; <esc>:w<cr>
 colorscheme tomorrow-night
 cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
