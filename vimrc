@@ -14,6 +14,16 @@ imap ,, <esc>:ls<cr>
 nmap ,, <esc>:ls<cr>
 colorscheme tomorrow-night
 cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
+""""""""""""""
+" tmux fixes "
+""""""""""""""
+" Handle tmux $TERM quirks in vim
+if $TERM =~ '^screen-256color'
+    map <Esc>OH <Home>
+    map! <Esc>OH <Home>
+    map <Esc>OF <End>
+    map! <Esc>OF <End>
+endif
 
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
