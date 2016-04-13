@@ -170,6 +170,11 @@ bar {
 new_window 1pixel 
 hide_edge_borders both
 
+# Add media keys.
+#
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
 # keysym-based config which used their favorite modifier (alt or windows)
