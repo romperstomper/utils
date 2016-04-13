@@ -36,7 +36,7 @@ set background=dark
 set ignorecase
 set ls=2
 set mouse=a
-set number
+set nonumber
 autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 
 
 if has("autocmd")

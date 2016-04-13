@@ -13,3 +13,4 @@ shopt -s histappend
 export TERM=screen-256color
 alias tmux="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
+setxkbmap -option ctrl:nocaps

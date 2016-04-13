@@ -6,5 +6,5 @@ except ImportError:
 else:
     import rlcompleter
     readline.parse_and_bind("tab: complete")
-import os, random, sys, re, string
-print 'imported os, random, sys, re, string'
+import os, random, sys, re, string, itertools
+print 'imported os, random, sys, re, string, itertools'
