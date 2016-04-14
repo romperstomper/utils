@@ -12,6 +12,7 @@ nmap zz <esc>:x<cr>
 nmap ;; <esc>:w<cr>
 imap ,, <esc>:ls<cr>
 nmap ,, <esc>:ls<cr>
+:command W w
 colorscheme tomorrow-night
 cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
 set pastetoggle=<insert>
