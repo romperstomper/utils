@@ -1,4 +1,6 @@
 # .bashrc
+alias p='cd ~/pi'
+alias k='cd ~/krc'
 alias o='ssh osmc@192.168.1.148'
 alias e='~/eclipse/eclipse'
 alias edit='vim'
@@ -14,5 +16,6 @@ export TERM=screen-256color
 alias tmux="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
 setxkbmap -option ctrl:nocaps
-#syndaemon -i 1 -t -k -d
-synclient PalmDetect=1
+syndaemon -i 1 -t -k -d
+#synclient PalmDetect=1
+alias gs='git diff --stat --cached origin/master'
