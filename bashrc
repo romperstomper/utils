@@ -1,4 +1,6 @@
 # .bashrc
+mkdir -p ~/.vim/colors
+ln -s ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 alias p='cd ~/pi'
 alias k='cd ~/krc'
 alias o='ssh osmc@192.168.1.148'
