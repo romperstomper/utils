@@ -20,5 +20,5 @@ alias tmux="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
 setxkbmap -option ctrl:nocaps
 syndaemon -i 1 -t -k -d
-#synclient PalmDetect=1
+synclient PalmDetect=1
 alias gs='git diff --stat --cached origin/master'
