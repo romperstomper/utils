@@ -22,3 +22,4 @@ setxkbmap -option ctrl:nocaps
 syndaemon -i 1 -t -k -d
 synclient PalmDetect=1
 alias gs='git diff --stat --cached origin/master'
+alias c='2>/dev/null google-chrome-stable &'
