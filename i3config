@@ -169,6 +169,8 @@ bar {
 }
 new_window 1pixel 
 hide_edge_borders both
+#disable mouse selecting focus
+focus_follows_mouse no
 
 # Add media keys.
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
