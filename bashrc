@@ -1,4 +1,5 @@
 # .bashrc
+localectl set-x11-keymap us pc105 "" ctrl:nocaps
 mkdir -p ~/.vim/colors
 ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
