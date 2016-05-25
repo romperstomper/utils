@@ -21,8 +21,8 @@ export TERM=screen-256color
 alias tmux="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
 setxkbmap -option "ctrl:nocaps"
-#syndaemon -i 1 -t -k -d
-#synclient PalmDetect=1
+syndaemon -i 1 -t -k -d
+synclient PalmDetect=1
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
 #nohup /home/gary/pi/background_changer.py &
