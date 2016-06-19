@@ -26,3 +26,8 @@ synclient PalmDetect=1
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
 #nohup /home/gary/pi/background_changer.py &
+alias ..='source ~/.bashrc'
+alias sagif='sudo apt-get -f install'
+alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
+alias sagu='sudo apt-get update'
+c=2>/dev/null /opt/google/chrome/google-chrome &
