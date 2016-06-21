@@ -1,3 +1,5 @@
 [user]
 	email = garyboland@gmail.com
 	name = gary boland
+git config --global push.default simple
+

@@ -1,4 +1,6 @@
 setxkbmap -model pc105 -layout us
+exec --no-startup-id /opt/google/chrome/google-chrome
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -40,9 +42,10 @@ bindsym Mod1+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym Mod1+Shift+q kill
+bindsym Mod1+c /opt/google/chrome/google-chrome
 
 # start dmenu (a program launcher)
-bindsym Mod1+c exec dmenu_run
+bindsym Mod1+q exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -135,7 +138,7 @@ bindsym Mod1+Shift+c reload
 bindsym Mod1+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
+bindsym Mod1+x exec i3-msg exit
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

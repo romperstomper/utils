@@ -1,5 +1,7 @@
 # .bashrc
 #localectl set-x11-keymap us pc105 "" ctrl:nocaps
+setxkbmap -model pc105 -layout us
+
 mkdir -p ~/.vim/colors
 ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
@@ -30,4 +32,3 @@ alias ..='source ~/.bashrc'
 alias sagif='sudo apt-get -f install'
 alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias sagu='sudo apt-get update'
-c=2>/dev/null /opt/google/chrome/google-chrome &
