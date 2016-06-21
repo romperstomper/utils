@@ -2,3 +2,5 @@
 	email = garyboland@gmail.com
 	name = gary boland
 
+[push]
+	default = simple
