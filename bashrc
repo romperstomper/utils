@@ -6,6 +6,8 @@ mkdir -p ~/.vim/colors
 ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
+alias ..="source ~/.bashrc"
+alias acs='apt-cache search'
 alias p='cd ~/pi'
 alias k='cd ~/krc'
 alias o='ssh osmc@192.168.1.148'
