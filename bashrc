@@ -3,11 +3,14 @@
 setxkbmap -model pc105 -layout us
 
 mkdir -p ~/.vim/colors
+mkdir -p ~/.i3
+ln -sf ~/utils/i3config ~/i3/config
 ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ..="source ~/.bashrc"
+alias t=tree
 alias acs='apt-cache search'
 alias p='cd ~/pi'
 alias k='cd ~/krc'
