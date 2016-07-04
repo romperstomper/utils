@@ -15,9 +15,11 @@ imap zz <esc>:x<cr>
 nmap zz <esc>:x<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
-:command W w
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 colorscheme tomorrow-night
-cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
 """"""""""""""
 " tmux fixes "
 """"""""""""""

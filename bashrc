@@ -6,6 +6,7 @@ mkdir -p ~/.vim/colors
 ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
+ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ..="source ~/.bashrc"
 alias acs='apt-cache search'
 alias p='cd ~/pi'
@@ -31,6 +32,6 @@ alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
 #nohup /home/gary/pi/background_changer.py &
 alias ..='source ~/.bashrc'
-alias sagif='sudo apt-get -f install'
+alias sagif='sudo apt-get -f install -y'
 alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias sagu='sudo apt-get update'
