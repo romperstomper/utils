@@ -1,21 +1,23 @@
 set nocompatible
+set clipboard=unnamed
+set number
 syntax on
 set ruler
 filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
+let mapleader=","
 imap jj <Esc>
 imap ;; <esc>:w<cr>
+nmap ;; <esc>:w<cr>
 imap zz <esc>:x<cr>
 nmap zz <esc>:x<cr>
-nmap ;; <esc>:w<cr>
-imap ,, <esc>:ls<cr>
-nmap ,, <esc>:ls<cr>
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
 :command W w
 colorscheme tomorrow-night
 cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
-set pastetoggle=<insert>
 """"""""""""""
 " tmux fixes "
 """"""""""""""
@@ -37,7 +39,6 @@ set background=dark
 set ignorecase
 set ls=2
 set mouse=a
-set nonumber
 autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 
 
 if has("autocmd")
@@ -50,3 +51,4 @@ endif
 " Better file completion
 set wildmenu
 set wildmode=list:longest,full
+set pastetoggle=<insert>
