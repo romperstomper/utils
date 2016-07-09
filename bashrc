@@ -4,7 +4,8 @@ setxkbmap -model pc105 -layout us
 
 mkdir -p ~/.vim/colors
 mkdir -p ~/.i3
-ln -sf ~/utils/i3config ~/i3/config
+ln -sf ~/utils/i3config ~/.i3/config
+ln -sf ~/utils/i3config.conf ~/.i3config.conf
 ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
@@ -38,3 +39,9 @@ alias ..='source ~/.bashrc'
 alias sagif='sudo apt-get -f install -y'
 alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias sagu='sudo apt-get update'
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/gary/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/gary/google-cloud-sdk/completion.bash.inc'
