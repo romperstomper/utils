@@ -45,3 +45,4 @@ source '/home/gary/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/home/gary/google-cloud-sdk/completion.bash.inc'
+alias gc='gcloud compute'
