@@ -1,5 +1,6 @@
 setxkbmap -model pc105 -layout us
 exec --no-startup-id /opt/google/chrome/google-chrome
+exec --no-startup-id i3-sensible-terminal
 
 # i3 config file (v4)
 #
