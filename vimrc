@@ -1,13 +1,20 @@
 set nocompatible
+highlight SpecialKey ctermfg=1
+set list
+set listchars=tab:T>
+
+
 set clipboard=unnamed
 set number
 syntax on
 set ruler
+set expandtab
 filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
 let mapleader=","
+nnoremap <leader><leader> <c-^>
 imap jj <Esc>
 imap ;; <esc>:w<cr>
 nmap ;; <esc>:w<cr>

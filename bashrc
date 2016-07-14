@@ -1,4 +1,5 @@
 # .bashrc
+alias gs='git status'
 #localectl set-x11-keymap us pc105 "" ctrl:nocaps
 setxkbmap -model pc105 -layout us
 
@@ -38,3 +39,8 @@ alias ..='source ~/.bashrc'
 alias sagif='sudo apt-get -f install -y'
 alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias sagu='sudo apt-get update'
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+export HISTTIMEFORMAT="%F %T "
+shopt -s cmdhist
+shopt -s histappend
