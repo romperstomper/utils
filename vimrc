@@ -15,6 +15,21 @@ set shiftwidth=2
 set softtabstop=2
 let mapleader=","
 nnoremap <leader><leader> <c-^>
+" run the current test
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run Test
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RunTest()
+  let line_number = line('.')
+  if line_number == '1'
+    exec ':!rspec 'expand('%')
+  else
+    let mytest = expand('%').":".line('.')
+    exec ':!rspec 'mytest
+  endif
+endfunction
+nnoremap <leader>t :call RunTest()<cr>
+
 imap jj <Esc>
 imap ;; <esc>:w<cr>
 nmap ;; <esc>:w<cr>
