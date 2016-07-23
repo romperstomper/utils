@@ -1,4 +1,5 @@
 # .bashrc
+alias gs='git status'
 #localectl set-x11-keymap us pc105 "" ctrl:nocaps
 if [ $HOSTNAME = envy ]
   then
