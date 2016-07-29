@@ -1,4 +1,5 @@
 # .bashrc
+export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 alias gs='git status'
 #localectl set-x11-keymap us pc105 "" ctrl:nocaps
 if [ $HOSTNAME = envy ]
