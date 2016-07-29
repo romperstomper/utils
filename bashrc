@@ -1,5 +1,4 @@
 # .bashrc
-export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 alias gs='git status'
 #localectl set-x11-keymap us pc105 "" ctrl:nocaps
 if [ $HOSTNAME = envy ]
@@ -48,4 +47,7 @@ alias sagif='sudo apt-get -f install -y'
 alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias sagu='sudo apt-get update'
 alias g='git status'
+alias gp='git pull'
+alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m gitignore'
+
 
