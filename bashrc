@@ -49,3 +49,10 @@ alias sagu='sudo apt-get update'
 alias g='git status'
 alias gp='git pull'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
+
+
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+source "${GITAWAREPROMPT}/main.sh"
+
