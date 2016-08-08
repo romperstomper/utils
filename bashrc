@@ -56,3 +56,4 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
+alias lol="git log --oneline --graph --decorate"
