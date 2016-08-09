@@ -6,6 +6,7 @@
 	default = simple
 
 [alias]
+  l="!source ~/utils/githelpers && pretty_git_log" 
   co = checkout
   ci = commit
   st = status
