@@ -48,6 +48,7 @@ alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias sagu='sudo apt-get update'
 alias g='git status'
 alias gp='git pull'
+alias gdd='git diff HEAD~1'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
 
 
