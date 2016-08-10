@@ -4,7 +4,7 @@ set list
 set listchars=tab:T>
 
 
-set clipboard=unnamed
+set clipboard=unnamedplus
 set number
 syntax on
 set ruler
