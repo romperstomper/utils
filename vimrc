@@ -14,6 +14,7 @@ set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
 let mapleader=","
+noremap <leader>r @:
 nnoremap <leader><leader> <c-^>
 " run the current test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
