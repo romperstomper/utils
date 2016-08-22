@@ -56,4 +56,9 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
-
+alias ass="nand2tetris/tools/Assembler.sh"
+alias cpu="nand2tetris/tools/CPUEmulator.sh"
+alias hs="nand2tetris/tools/HardwareSimulator.sh"
+alias jc="nand2tetris/tools/JackCompiler.sh"
+alias tc="nand2tetris/tools/TextComparer.sh"
+alias vme="nand2tetris/tools/VMEmulator.sh"
