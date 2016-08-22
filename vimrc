@@ -2,9 +2,8 @@ set nocompatible
 highlight SpecialKey ctermfg=1
 set list
 set listchars=tab:T>
-
-
-set clipboard=unnamedplus
+" cross-platform way to share the vim clipboard with the system clipboard
+set clipboard^=unnamed,unnamedplus
 set number
 syntax on
 set ruler
