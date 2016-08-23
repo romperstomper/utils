@@ -22,10 +22,10 @@ nnoremap <leader><leader> <c-^>
 function! RunTest()
   let line_number = line('.')
   if line_number == '1'
-    exec ':!rspec 'expand('%')
+    exec ':!bundle exec rspec 'expand('%')
   else
     let mytest = expand('%').":".line('.')
-    exec ':!rspec 'mytest
+    exec ':!bundle exec rspec 'mytest
   endif
 endfunction
 nnoremap <leader>t :call RunTest()<cr>
