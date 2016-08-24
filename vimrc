@@ -74,4 +74,4 @@ endif
 " Better file completion
 set wildmenu
 set wildmode=list:longest,full
-set pastetoggle=<insert>
+set pastetoggle=<leader>p
