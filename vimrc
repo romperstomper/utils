@@ -75,3 +75,5 @@ endif
 set wildmenu
 set wildmode=list:longest,full
 set pastetoggle=<leader>p
+set undofile
+set undodir=$HOME/.vim
