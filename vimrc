@@ -13,7 +13,9 @@ set shiftwidth=2
 set softtabstop=2
 let mapleader=","
 noremap <leader>r @:
-nnoremap <leader><leader> <c-^>
+nnoremap <leader><leader> <c-^> 
+nnoremap \ /\s\+$<cr>
+
 " run the current test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Run Test
