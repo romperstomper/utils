@@ -14,6 +14,7 @@ set softtabstop=2
 let mapleader=","
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
+nnoremap <leader>z <esc>:x<cr> 
 nnoremap \ /\s\+$<cr>
 
 " run the current test
@@ -34,8 +35,6 @@ nnoremap <leader>t :call RunTest()<cr>
 imap jj <Esc>
 imap ;; <esc>:w<cr>
 nmap ;; <esc>:w<cr>
-imap zz <esc>:x<cr>
-nmap zz <esc>:x<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 nnoremap <c-j> <c-w>j
