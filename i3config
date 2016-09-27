@@ -42,11 +42,11 @@ floating_modifier Mod1
 bindsym Mod1+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym Mod1+Shift+q kill
+bindsym Mod1+q kill
 bindsym Mod1+c /opt/google/chrome/google-chrome
 
 # start dmenu (a program launcher)
-bindsym Mod1+q exec dmenu_run
+bindsym Mod1+Shift+q exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -83,7 +83,9 @@ bindsym Mod1+g split v
 bindsym Mod1+v split h
 
 # enter fullscreen mode for the focused container
-bindsym Mod1+Shift+f fullscreen toggle
+bindsym Mod1+Shift+f fullscreen toggle global
+bindsym Mod1+t fullscreen enable global
+bindsym Mod1+y fullscreen disable global
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym Mod1+s layout stacking
