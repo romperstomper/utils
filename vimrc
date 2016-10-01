@@ -4,7 +4,6 @@ set list
 set listchars=tab:T>
 " cross-platform way to share the vim clipboard with the system clipboard
 set clipboard^=unnamed,unnamedplus
-set number
 syntax on
 set ruler
 set expandtab
@@ -14,7 +13,11 @@ set shiftwidth=2
 set softtabstop=2
 let mapleader=","
 noremap <leader>r @:
-nnoremap <leader><leader> <c-^>
+nnoremap <leader><leader> <c-^> 
+nnoremap <leader>z <esc>:x<cr> 
+"nnoremap <leader>w :!sudo tee % > /dev/null - needs work
+nnoremap \ /\s\+$<cr>
+
 " run the current test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Run Test
@@ -33,8 +36,6 @@ nnoremap <leader>t :call RunTest()<cr>
 imap jj <Esc>
 imap ;; <esc>:w<cr>
 nmap ;; <esc>:w<cr>
-imap zz <esc>:x<cr>
-nmap zz <esc>:x<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 nnoremap <c-j> <c-w>j
@@ -75,4 +76,6 @@ endif
 " Better file completion
 set wildmenu
 set wildmode=list:longest,full
-set pastetoggle=<insert>
+set pastetoggle=<leader>p
+set undofile
+set undodir=$HOME/.vim
