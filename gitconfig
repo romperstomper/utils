@@ -17,3 +17,5 @@
  # create new feature branch off master
   nb = !sh -c 'git checkout -b $1 --track origin/master' -
   nbc = !sh -c 'git checkout -b $1 --track origin/master && git commit --allow-empty -m "$1: "' -
+[http]
+	postBuffer = 1048576000

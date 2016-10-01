@@ -1,0 +1,12 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+
+    sleep 30
+    /bin/mount -a 
+
+    ;;
+ esac
+
+quit 0
