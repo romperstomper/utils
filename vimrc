@@ -56,7 +56,7 @@ endif
 
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+match OverLength /\%99v.\+/
 
 " use 256 colors (must be supported by xterm and screen)
 set t_Co=256
