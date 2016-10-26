@@ -21,7 +21,7 @@ ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ..="source ~/.bashrc"
-alias t=tree
+alias tr=tree
 alias acs='apt-cache search'
 alias p='cd ~/pi'
 alias k='cd ~/krc'
@@ -37,11 +37,10 @@ export HISTTIMEFORMAT="%F %T "
 shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
-alias tmux="export TERM=screen-256color && tmux"
+alias t="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
-#nohup /home/gary/pi/background_changer.py &
 alias ..='source ~/.bashrc'
 alias sagif='sudo apt-get -f install -y'
 alias saguu='sudo apt-get update -y && sudo apt-get upgrade -y'
