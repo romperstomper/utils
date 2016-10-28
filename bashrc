@@ -72,4 +72,5 @@ alias cc="cd -"
 alias ca="/usr/bin/calibre"
 alias nn="nc -vz"
 alias s='ssh "-o StrictHostKeyChecking no"'
+alias gu='git commit -m "utils"; git push'
 alias kp="~/utils/keypush.sh"
