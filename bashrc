@@ -71,5 +71,5 @@ alias lt="ls -l"
 alias cc="cd -"
 alias ca="/usr/bin/calibre"
 alias nn="nc -vz"
-alias s="ssh"
+alias s='ssh "-o StrictHostKeyChecking=no"'
 alias kp="~/utils/keypush.sh"
