@@ -73,3 +73,7 @@ alias ca="/usr/bin/calibre"
 alias nn="nc -vz"
 alias s="ssh"
 alias la="ssh 130.211.78.171 -l gary"
+alias s='ssh "-o StrictHostKeyChecking no"'
+alias gu='git commit -m "utils"; git push'
+alias kp="~/utils/keypush.sh"
+alias d="diff --side-by-side --suppress-common-lines"
