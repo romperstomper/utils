@@ -1,17 +1,24 @@
 # .bashrc
 alias gs='git status'
 #localectl set-x11-keymap us pc105 "" ctrl:nocaps
-if [ $HOSTNAME = envy ]
-  then
-    setxkbmap -model pc105 -layout us
-    setxkbmap -option "ctrl:nocaps"
-    # The next line updates PATH for the Google Cloud SDK.
-    source '/home/gary/google-cloud-sdk/path.bash.inc'
-    # The next line enables shell command completion for gcloud.
-    source '/home/gary/google-cloud-sdk/completion.bash.inc'
-    alias gc='gcloud compute'
-fi
+#if [ $HOSTNAME = envy ]
+#  then
+#    setxkbmap -model pc105 -layout us
+#    setxkbmap -option "ctrl:nocaps"
+#    # The next line updates PATH for the Google Cloud SDK.
+#    source '/home/gary/google-cloud-sdk/path.bash.inc'
+#    # The next line enables shell command completion for gcloud.
+#    source '/home/gary/google-cloud-sdk/completion.bash.inc'
+#    alias gc='gcloud compute'
+#fi
 
+function _update_ps1() {
+    PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 mkdir -p ~/.vim/colors
 mkdir -p ~/.i3
 ln -sf ~/utils/i3config ~/.i3/config
