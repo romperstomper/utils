@@ -1,24 +1,24 @@
 # .bashrc
 alias gs='git status'
-#localectl set-x11-keymap us pc105 "" ctrl:nocaps
-#if [ $HOSTNAME = envy ]
-#  then
-#    setxkbmap -model pc105 -layout us
-#    setxkbmap -option "ctrl:nocaps"
-#    # The next line updates PATH for the Google Cloud SDK.
-#    source '/home/gary/google-cloud-sdk/path.bash.inc'
-#    # The next line enables shell command completion for gcloud.
-#    source '/home/gary/google-cloud-sdk/completion.bash.inc'
-#    alias gc='gcloud compute'
-#fi
-
-function _update_ps1() {
-    PS1="$(~/powerline-shell.py $? 2> /dev/null)"
-}
-
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+localectl set-x11-keymap us pc105 "" ctrl:nocaps
+if [ $HOSTNAME = envy ]
+  then
+    setxkbmap -model pc105 -layout us
+    setxkbmap -option "ctrl:nocaps"
+    # The next line updates PATH for the Google Cloud SDK.
+    source '/home/gary/google-cloud-sdk/path.bash.inc'
+    # The next line enables shell command completion for gcloud.
+    source '/home/gary/google-cloud-sdk/completion.bash.inc'
+    alias gc='gcloud compute'
 fi
+
+#function _update_ps1() {
+#    PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+#}
+
+#if [ "$TERM" != "linux" ]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
 mkdir -p ~/.vim/colors
 mkdir -p ~/.i3
 ln -sf ~/utils/i3config ~/.i3/config
@@ -59,10 +59,10 @@ alias ga='git add'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
 
 
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-source "${GITAWAREPROMPT}/main.sh"
+#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+#export GITAWAREPROMPT=~/.bash/git-aware-prompt
+#export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+#source "${GITAWAREPROMPT}/main.sh"
 alias ass="nand2tetris/tools/Assembler.sh"
 alias cpu="nand2tetris/tools/CPUEmulator.sh"
 alias hs="nand2tetris/tools/HardwareSimulator.sh"
@@ -79,12 +79,13 @@ alias cc="cd -"
 alias ca="/usr/bin/calibre"
 alias nn="nc -vz"
 alias s="ssh"
-alias la="ssh 130.211.78.171 -l gary"
+alias la="ssh 104.199.45.88 -l gary"
 alias s='ssh "-o StrictHostKeyChecking no"'
 alias gu='git commit -m "utils"; git push'
 alias kp="~/utils/keypush.sh"
 alias md="diff --side-by-side --suppress-common-lines"
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
 # needs cdiff 
-alias d="cdiff -s -w 0"
 alias ed="vim diff <(git show ) "
+=======
+alias d="diff --side-by-side --suppress-common-lines"
