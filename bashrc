@@ -84,3 +84,4 @@ alias s='ssh "-o StrictHostKeyChecking no"'
 alias gu='git commit -m "utils"; git push'
 alias kp="~/utils/keypush.sh"
 alias d="diff --side-by-side --suppress-common-lines"
+alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
