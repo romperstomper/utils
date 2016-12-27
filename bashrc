@@ -83,5 +83,7 @@ alias la="ssh 130.211.78.171 -l gary"
 alias s='ssh "-o StrictHostKeyChecking no"'
 alias gu='git commit -m "utils"; git push'
 alias kp="~/utils/keypush.sh"
-alias d="diff --side-by-side --suppress-common-lines"
+alias md="diff --side-by-side --suppress-common-lines"
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
+# needs cdiff 
+alias d="cdiff -s -w 0"
