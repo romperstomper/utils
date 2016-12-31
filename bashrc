@@ -87,3 +87,4 @@ alias md="diff --side-by-side --suppress-common-lines"
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
 # needs cdiff 
 alias d="cdiff -s -w 0"
+alias ed="vim diff <(git show ) "
