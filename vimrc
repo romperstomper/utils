@@ -18,6 +18,9 @@ nnoremap <leader>z <esc>:x<cr>
 "nnoremap <leader>w :!sudo tee % > /dev/null - needs work
 nnoremap \ /\s\+$<cr>
 nnoremap <leader>q <esc>:qa!<cr> 
+nnoremap .. <C-w><C-w>
+nnoremap <leader>s <C-w>S
+nnoremap <leader>v <C-w>v
 
 " run the current test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
