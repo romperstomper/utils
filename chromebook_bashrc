@@ -1,0 +1,14 @@
+alias sagu='sudo apt-get update -y'
+alias saguu='sudo apt-get upgrade -y'
+alias ..='source ~/.bashrc'
+alias sagi='sudo apt-get install -y'
+
+if [ $HSOTNAME = envy ]
+  then
+
+    # add control function to chromebook
+    xmodmap ~/.Xmodmap
+    source ~/.bashrc
+fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
