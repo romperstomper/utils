@@ -21,6 +21,7 @@ nnoremap <leader>q <esc>:qa!<cr>
 nnoremap .. <C-w><C-w>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
+nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 
@@ -31,10 +32,10 @@ nnoremap <C-p> :bprevious<CR>
 function! RunTest()
   let line_number = line('.')
   if line_number == '1'
-    exec ':!bundle exec rspec 'expand('%')
+    exec ':!rspec 'expand('%')
   else
     let mytest = expand('%').":".line('.')
-    exec ':!bundle exec rspec 'mytest
+    exec ':!rspec 'mytest
   endif
 endfunction
 nnoremap <leader>t :call RunTest()<cr>
