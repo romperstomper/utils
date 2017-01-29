@@ -16,7 +16,8 @@ noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
 nnoremap <leader>z <esc>:x<cr> 
 "nnoremap <leader>w :!sudo tee % > /dev/null - needs work
-nnoremap \ /\s\+$<cr>
+nnoremap <leader>\ /\s\+$<cr>
+nnoremap \ <esc>:
 nnoremap <leader>q <esc>:qa!<cr> 
 nnoremap .. <C-w><C-w>
 nnoremap <leader>s <C-w>S
