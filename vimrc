@@ -22,7 +22,7 @@ nnoremap <leader>q <esc>:qa!<cr>
 nnoremap .. <C-w><C-w>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
-nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR>
+nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-x> :bd<CR>
 nnoremap <C-a> ^
