@@ -45,7 +45,7 @@ endfunction
 nnoremap <leader>t :call RunTest()<cr>
 
 imap jj <Esc>
-imap ;; <esc>:w<cr>
+imap ;; <esc>:wa<cr>
 nmap ;; <esc>:w<cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
