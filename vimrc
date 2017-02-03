@@ -21,6 +21,7 @@ nnoremap <leader>\ /\s\+$<cr>
 nnoremap \ <esc>:
 nnoremap <leader>q <esc>:qa!<cr> 
 nnoremap .. <C-w><C-w>
+nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
 nnoremap <leader>. :so ~/.vimrc<cr>
