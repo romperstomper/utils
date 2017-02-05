@@ -55,7 +55,7 @@ alias sagu='sudo apt-get update'
 alias g='git status'
 alias gp='git pull'
 alias gdd='git diff HEAD~1'
-alias ga='git add'
+alias ga='git add .'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
 
 
@@ -87,5 +87,4 @@ alias md="diff --side-by-side --suppress-common-lines"
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
 # needs cdiff 
 alias ed="vim diff <(git show ) "
-=======
 alias d="diff --side-by-side --suppress-common-lines"
