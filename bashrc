@@ -10,6 +10,7 @@ if [ $HOSTNAME = envy ]
     # The next line enables shell command completion for gcloud.
     source '/home/gary/google-cloud-sdk/completion.bash.inc'
     alias gc='gcloud compute'
+    alias tor='cd ~/tor-browser_en-US;./start-tor-browser.desktop'
 fi
 
 #function _update_ps1() {
