@@ -13,13 +13,7 @@ if [ $HOSTNAME = envy ]
     alias tor='cd ~/tor-browser_en-US;./start-tor-browser.desktop'
 fi
 
-#function _update_ps1() {
-#    PS1="$(~/powerline-shell.py $? 2> /dev/null)"
-#}
 
-#if [ "$TERM" != "linux" ]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
 mkdir -p ~/.vim/colors
 mkdir -p ~/.i3
 ln -sf ~/utils/i3config ~/.i3/config
@@ -60,11 +54,14 @@ alias ga='git add'
 alias gaa='git add .'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
 
+# history
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-#export GITAWAREPROMPT=~/.bash/git-aware-prompt
-#export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-#source "${GITAWAREPROMPT}/main.sh"
+# git aware prompt
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+source "${GITAWAREPROMPT}/main.sh"
+
 alias ass="nand2tetris/tools/Assembler.sh"
 alias cpu="nand2tetris/tools/CPUEmulator.sh"
 alias hs="nand2tetris/tools/HardwareSimulator.sh"
@@ -72,7 +69,6 @@ alias jc="nand2tetris/tools/JackCompiler.sh"
 alias tc="nand2tetris/tools/TextComparer.sh"
 alias u="cd ~/utils"
 alias vme="nand2tetris/tools/VMEmulator.sh"
-alias f="googler"
 alias xx="gnome-session-quit --no-prompt"
 alias ut="cd ~/utils"
 alias ll="ls -l"
