@@ -86,3 +86,6 @@ alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -
 # needs cdiff 
 alias ed="vim diff <(git show ) "
 alias d="diff --side-by-side --suppress-common-lines"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
