@@ -1,21 +1,23 @@
 set nocompatible
-highlight SpecialKey ctermfg=1
+filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-
+Plugin 'kien/ctrlp.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
 filetype plugin indent on    " required
+
+syntax enable
+colorscheme Tomorrow-Night
+highlight SpecialKey ctermfg=1
 set list
 set listchars=tab:T>
 " cross-platform way to share the vim clipboard with the system clipboard
 set clipboard^=unnamed,unnamedplus
-syntax on
 set ruler
 set expandtab
 filetype plugin indent on    " required
@@ -23,6 +25,7 @@ set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
 nnoremap ff :NERDTreeToggle<cr>
+nnoremap ss :CtrlP<cr>
 let mapleader=","
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
@@ -68,7 +71,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-colorscheme tomorrow-night
 """"""""""""""
 " tmux fixes "
 """"""""""""""

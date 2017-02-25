@@ -13,7 +13,6 @@ if [ $HOSTNAME = envy ]
     alias tor='cd ~/tor-browser_en-US;./start-tor-browser.desktop'
 fi
 
-
 mkdir -p ~/.vim/colors
 mkdir -p ~/.i3
 ln -sf ~/utils/i3config ~/.i3/config
