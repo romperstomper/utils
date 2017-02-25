@@ -59,7 +59,7 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 
 # git aware prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
-export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
 alias ass="nand2tetris/tools/Assembler.sh"
