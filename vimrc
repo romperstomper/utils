@@ -1,5 +1,16 @@
 set nocompatible
 highlight SpecialKey ctermfg=1
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+filetype plugin indent on    " required
 set list
 set listchars=tab:T>
 " cross-platform way to share the vim clipboard with the system clipboard
@@ -11,6 +22,7 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
+nnoremap ff :NERDTreeToggle<cr>
 let mapleader=","
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
