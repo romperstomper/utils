@@ -26,6 +26,7 @@ alias ..="source ~/.bashrc"
 alias tr=tree
 alias acs='apt-cache search'
 alias p='cd ~/pi'
+alias v='/usr/bin/vim'
 alias k='cd ~/krc'
 alias o='ssh osmc@192.168.1.148'
 alias e='~/eclipse/eclipse'
