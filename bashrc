@@ -17,7 +17,7 @@ mkdir -p ~/.vim/colors
 mkdir -p ~/.i3
 ln -sf ~/utils/i3config ~/.i3/config
 ln -sf ~/utils/i3config.conf ~/.i3config.conf
-ln -sf ~/utils/tomorrow-night.vim ~/.vim/colors/tomorrow-night.vim
+ln -sf ~/utils/Tomorrow-night.vim ~/.vim/colors/Tomorrow-night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
