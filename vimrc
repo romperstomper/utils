@@ -24,7 +24,7 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
-nnoremap ff :NERDTreeToggle<cr>
+nnoremap <Space> :NERDTreeToggle<cr>
 nnoremap ss :CtrlP<cr>
 let mapleader=","
 noremap <leader>r @:
@@ -41,11 +41,13 @@ nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
-nnoremap <C-n> :bnext<CR>
 nnoremap <C-x> :bd<CR>
 nnoremap <C-a> ^
 nnoremap <C-e> $
-nnoremap <C-p> :bprevious<CR>
+nnoremap <C-m> :bprevious<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap zz <esc>:xa<cr>
+
 
 " run the current test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
