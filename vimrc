@@ -62,11 +62,13 @@ function! RunTest()
 endfunction
 nnoremap <leader>t :call RunTest()<cr>
 
-imap jj <Esc>
+imap zz <esc>:w<cr>
 imap ;; <esc>:wa<cr>
 nmap ;; <esc>:w<cr>
+imap <c-z> <esc><c-z><cr>
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
+nnoremap zz <esc>:x<cr>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
