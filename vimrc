@@ -43,6 +43,7 @@ nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
 nnoremap <C-x> :bd<CR>
 nnoremap <C-a> ^
+nnoremap <C-q> <esc>:q!<cr> 
 nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
 nnoremap <C-n> :bnext<CR>
