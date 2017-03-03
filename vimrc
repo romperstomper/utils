@@ -26,7 +26,7 @@ set shiftwidth=2
 set softtabstop=2
 nnoremap <Space> :NERDTreeToggle<cr>
 nnoremap ss :CtrlP<cr>
-let mapleader=","
+let mapleader="e"
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
 nnoremap <leader>z <esc>:x<cr> 
@@ -43,7 +43,7 @@ nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
 nnoremap <C-x> :bd<CR>
 nnoremap <C-a> ^
-nnoremap <C-q> <esc>:q!<cr> 
+nnoremap qq <esc>:q!<cr> 
 nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
 nnoremap <C-n> :bnext<CR>
