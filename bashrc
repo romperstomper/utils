@@ -1,4 +1,12 @@
 # .bashrc
+[ -z "$DISPLAY" ] || xmodmap ~/utils/xmodmaprc
+if [ ! -f ~/.bash/]
+then
+  mkdir ~/.bash
+  cd ~/.bash
+  git clone git://github.com/jimeh/git-aware-prompt.git
+fi
+
 if [ ! -d ~/.vim/bundle/Vundle.vim ]
   then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
@@ -8,7 +16,6 @@ fi
 if [ $HOSTNAME = localhost ]
   then
     setxkbmap -option "ctrl:nocaps"
-    xmodmap ~/utils/xmodmaprc
 fi
 if [ $HOSTNAME = envy ]
   then
