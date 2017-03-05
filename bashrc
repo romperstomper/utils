@@ -1,5 +1,4 @@
 # .bashrc
-[ -z "$DISPLAY" ] || xmodmap ~/utils/xmodmaprc
 if [ ! -f ~/.bash/]
 then
   mkdir ~/.bash
