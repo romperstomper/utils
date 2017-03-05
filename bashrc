@@ -1,5 +1,5 @@
 # .bashrc
-if [ ! -f ~/.bash/]
+if [ ! -f ~/.bash/git-aware-prompt/prompt.sh ]
 then
   mkdir ~/.bash
   cd ~/.bash

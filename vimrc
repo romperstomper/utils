@@ -26,7 +26,7 @@ set shiftwidth=2
 set softtabstop=2
 nnoremap <Space> :NERDTreeToggle<cr>
 nnoremap ss :CtrlP<cr>
-let mapleader="\"
+let mapleader="\\"
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
 nnoremap <leader>z <esc>:x<cr> 
