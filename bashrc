@@ -1,8 +1,18 @@
 # .bashrc
-alias gs='git status'
-localectl set-x11-keymap us pc105 "" ctrl:nocaps
+if [ ! -d ~/.vim/bundle/Vundle.vim ]
+  then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+    vim +PluginInstall +qall
+fi
+
+if [ $HOSTNAME = localhost ]
+  then
+    setxkbmap -option "ctrl:nocaps"
+    xmodmap ~/utils/xmodmaprc
+fi
 if [ $HOSTNAME = envy ]
   then
+    #localectl set-x11-keymap us pc105 "" ctrl:nocaps
     setxkbmap -model pc105 -layout us
     setxkbmap -option "ctrl:nocaps"
     # The next line updates PATH for the Google Cloud SDK.
@@ -61,13 +71,6 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
-alias ass="nand2tetris/tools/Assembler.sh"
-alias cpu="nand2tetris/tools/CPUEmulator.sh"
-alias hs="nand2tetris/tools/HardwareSimulator.sh"
-alias jc="nand2tetris/tools/JackCompiler.sh"
-alias tc="nand2tetris/tools/TextComparer.sh"
-alias u="cd ~/utils"
-alias vme="nand2tetris/tools/VMEmulator.sh"
 alias xx="gnome-session-quit --no-prompt"
 alias ut="cd ~/utils"
 alias ll="ls -l"
