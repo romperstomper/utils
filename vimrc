@@ -24,30 +24,38 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
-nnoremap <Space> :NERDTreeToggle<cr>
-nnoremap ss :CtrlP<cr>
+
 let mapleader="\\"
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
-nnoremap <leader>z <esc>:x<cr> 
-"nnoremap <leader>w :!sudo tee % > /dev/null - needs work
 nnoremap <leader>w <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:qa!<cr> 
-nnoremap .. <C-w><C-w>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
+nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
+nnoremap <Space> :NERDTreeToggle<cr>
 nnoremap <C-x> :bd<CR>
 nnoremap <C-a> ^
-nnoremap qq <esc>:q!<cr> 
 nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
 nnoremap <C-n> :bnext<CR>
+nnoremap ;; <esc>:w<cr>
+nnoremap .. <C-w><C-w>
+nnoremap qq <esc>:q!<cr> 
+nnoremap ss :CtrlP<cr>
 nnoremap zz <esc>:xa<cr>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
+imap ;; <esc>:wa<cr>
+imap <c-z> <esc><c-z><cr>
+imap <c-l> <space>=><space>
 
 " run the current test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,17 +72,7 @@ function! RunTest()
 endfunction
 nnoremap <leader>t :call RunTest()<cr>
 
-imap zz <esc>:w<cr>
-imap ;; <esc>:wa<cr>
-nmap ;; <esc>:w<cr>
-imap <c-z> <esc><c-z><cr>
 " Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
-nnoremap zz <esc>:x<cr>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
 """"""""""""""
 " tmux fixes "
 """"""""""""""
