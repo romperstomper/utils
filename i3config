@@ -45,7 +45,7 @@ bindsym Mod1+Return exec gnome-terminal --hide-menubar
 
 # kill focused window
 bindsym Mod1+q kill
-bindsym Mod1+c /opt/google/chrome/google-chrome
+bindsym Mod1+c exec /opt/google/chrome/google-chrome
 
 # start dmenu (a program launcher)
 bindsym Mod1+Shift+q exec dmenu_run
@@ -85,7 +85,7 @@ bindsym Mod1+g split v
 bindsym Mod1+v split h
 
 # enter fullscreen mode for the focused container
-bindsym Mod1+Shift+f fullscreen toggle global
+bindsym Mod1+Shift+f fullscreen 
 bindsym Mod1+t fullscreen enable global
 bindsym Mod1+y fullscreen disable global
 
