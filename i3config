@@ -1,5 +1,6 @@
 #setxkbmap -model pc105 -layout us
-exec --no-startup-id gnome-terminal
+exec --no-startup-id gnome-terminal --hide-menubar
+#exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id /opt/google/chrome/google-chrome
 
 # i3 config file (v4)
@@ -40,7 +41,7 @@ floating_modifier Mod1
 
 # start a terminal
 #bindsym Mod1+Return exec i3-sensible-terminal
-bindsym Mod1+Return exec gnome-terminal
+bindsym Mod1+Return exec gnome-terminal --hide-menubar
 
 # kill focused window
 bindsym Mod1+q kill
