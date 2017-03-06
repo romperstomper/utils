@@ -1,4 +1,5 @@
 # .bashrc
+
 if [ ! -f ~/.bash/git-aware-prompt/prompt.sh ]
 then
   mkdir ~/.bash
@@ -12,10 +13,6 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]
     vim +PluginInstall +qall
 fi
 
-if [ $HOSTNAME = localhost ]
-  then
-    setxkbmap -option "ctrl:nocaps"
-fi
 if [ $HOSTNAME = envy ]
   then
     #localectl set-x11-keymap us pc105 "" ctrl:nocaps
