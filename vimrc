@@ -32,8 +32,7 @@ nnoremap <leader><leader> <c-^>
 nnoremap <leader>z <esc>:x<cr> 
 "nnoremap <leader>w :!sudo tee % > /dev/null - needs work
 nnoremap <leader>w <esc>:!pwd<cr>
-nnoremap <leader>\ /\s\+$<cr>
-nnoremap \ <esc>:
+nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:qa!<cr> 
 nnoremap .. <C-w><C-w>
 nnoremap <leader>l <esc>:ls<CR>
