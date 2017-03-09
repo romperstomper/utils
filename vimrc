@@ -28,7 +28,7 @@ set softtabstop=2
 let mapleader="\\"
 noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
-nnoremap <leader>w <esc>:!pwd<cr>
+nnoremap <leader>p <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:qa!<cr> 
 nnoremap <leader>l <esc>:ls<CR>
