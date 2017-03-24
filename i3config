@@ -94,6 +94,9 @@ bindsym Mod1+s layout stacking
 bindsym Mod1+w layout tabbed
 bindsym Mod1+e layout toggle split
 
+# printscreen
+bindsym --release Print exec "scrot -m '/home/gary/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+
 # toggle tiling / floating
 bindsym Mod1+Shift+space floating toggle
 
