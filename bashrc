@@ -35,7 +35,7 @@ ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
 alias ..="source ~/.bashrc"
-alias 'pr'='git pull --rebase'
+alias 'gpr'='git pull --rebase'
 alias tr=tree
 alias acs='apt-cache search'
 alias p='cd ~/pi'
