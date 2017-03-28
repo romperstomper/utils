@@ -32,11 +32,13 @@ ln -sf ~/utils/i3config ~/.i3/config
 ln -sf ~/utils/Tomorrow-Night.vim ~/.vim/colors/Tomorrow-Night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
+ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
 alias ..="source ~/.bashrc"
 alias 'gpr'='git pull --rebase'
 alias tr=tree
+alias irb='irb --simple-prompt'
 alias acs='apt-cache search'
 alias p='cd ~/pi'
 alias v='/usr/bin/vim'
