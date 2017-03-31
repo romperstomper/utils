@@ -70,6 +70,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
+inoremap ( ()<Esc>i
 
 
 " run the current test
