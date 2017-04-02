@@ -13,6 +13,7 @@ filetype plugin indent on    " required
 syntax enable
 colorscheme Tomorrow-Night
 highlight SpecialKey ctermfg=1
+set incsearch
 set list
 set listchars=tab:T>
 " cross-platform way to share the vim clipboard with the system clipboard
@@ -29,7 +30,7 @@ noremap <leader>r @:
 nnoremap <leader><leader> <c-^> 
 nnoremap <leader>p <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
-nnoremap <leader>q <esc>:qa!<cr> 
+nnoremap <leader>q <esc>:q!<cr> 
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
@@ -71,6 +72,10 @@ endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
 inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
 
 
 " run the current test
