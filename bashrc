@@ -98,5 +98,5 @@ alias d="diff --side-by-side --suppress-common-lines"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=/home/gary/.rvm/gems/ruby-2.3.3/bin:$PATH
+PATH=/home/gary/.rvm/gems/ruby-2.2.4/bin:$PATH
 
