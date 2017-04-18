@@ -90,6 +90,8 @@ alias s='ssh "-o StrictHostKeyChecking no"'
 alias gu='git commit -m "utils"; git push'
 alias kp="~/utils/keypush.sh"
 alias md="diff --side-by-side --suppress-common-lines"
+alias rvmg='rvm gemset list'
+alias rvml='rvm list'
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
 # needs cdiff 
 alias ed="vim diff <(git show ) "
