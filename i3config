@@ -2,7 +2,7 @@
 exec --no-startup-id gnome-terminal --hide-menubar
 #exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id /opt/google/chrome/google-chrome
-exec --no-startup-id /usr/bin/firefox
+#exec --no-startup-id /usr/bin/firefox
 
 # i3 config file (v4)
 #

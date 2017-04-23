@@ -13,7 +13,8 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]
     vim +PluginInstall +qall
 fi
 if [ $HOSTNAME = localhost ]
-  xmodmap ~/.Xmodmap
+  then
+    xmodmap ~/.Xmodmap
 fi
 if [ $HOSTNAME = envy ]
   then
@@ -40,7 +41,7 @@ alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
 alias ..="source ~/.bashrc"
 alias 'gpr'='git pull --rebase'
 alias tr=tree
-alias irb='irb --simple-prompt'
+alias irbb='irb --simple-prompt'
 alias acs='apt-cache search'
 alias p='cd ~/pi'
 alias v='/usr/bin/vim'
