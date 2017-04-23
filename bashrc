@@ -104,4 +104,5 @@ alias d="diff --side-by-side --suppress-common-lines"
 #export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=/home/gary/.rvm/gems/ruby-2.2.4/bin:$PATH
+alias rvma='rvm get stable --auto-dotfiles'
 
