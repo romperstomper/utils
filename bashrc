@@ -12,7 +12,9 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
     vim +PluginInstall +qall
 fi
-
+if [ $HOSTNAME = localhost ]
+  xmodmap ~/.Xmodmap
+fi
 if [ $HOSTNAME = envy ]
   then
     #localectl set-x11-keymap us pc105 "" ctrl:nocaps
