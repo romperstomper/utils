@@ -27,8 +27,8 @@ if [ $HOSTNAME = envy ]
 fi
 
 mkdir -p ~/.vim/colors
-mkdir -p ~/.i3
-ln -sf ~/utils/i3config ~/.i3/config
+#mkdir -p ~/.i3
+#ln -sf ~/utils/i3config ~/.i3/config
 ln -sf ~/utils/Tomorrow-Night.vim ~/.vim/colors/Tomorrow-Night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
