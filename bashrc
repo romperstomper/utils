@@ -68,6 +68,7 @@ alias sagu='sudo apt-get update'
 alias g='git status'
 alias gp='git pull'
 alias gdd='git diff HEAD~1'
+alias gd='git diff'
 alias ga='git add'
 alias gaa='git add .'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
@@ -106,3 +107,5 @@ alias d="diff --side-by-side --suppress-common-lines"
 PATH=/home/gary/.rvm/gems/ruby-2.2.4/bin:$PATH
 alias rvma='rvm get stable --auto-dotfiles'
 
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
