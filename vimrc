@@ -1,4 +1,6 @@
 set nocompatible
+set splitbelow
+set splitright
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,9 +42,9 @@ set shiftwidth=2
 set softtabstop=2
 
 let mapleader="\\"
-set pastetoggle=<leader>pt
-noremap <leader>pi :PluginInstall<cr>
+noremap <leader>i :PluginInstall<cr>
 noremap <leader>r @:
+noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^> 
 nnoremap <leader>p <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
