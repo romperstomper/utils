@@ -8,24 +8,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'hwartig/vim-seeing-is-believing'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-augroup seeingIsBelievingSettings
-  autocmd!
-
-  autocmd FileType ruby nmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
-  autocmd FileType ruby xmap <buffer> <Enter> <Plug>(seeing-is-believing-mark-and-run)
-
-  autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-  autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing-is-believing-mark)
-
-  autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing-is-believing-run)
-  autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing-is-believing-run)
-augroup END
-
 syntax enable
 colorscheme Tomorrow-Night
 highlight SpecialKey ctermfg=1
