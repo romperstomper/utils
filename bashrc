@@ -40,6 +40,7 @@ ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
 alias ..="source ~/.bashrc"
 alias 'gpr'='git pull --rebase'
+alias 'gf'='git clean -f'
 alias tr=tree
 alias irbb='irb --simple-prompt'
 alias acs='apt-cache search'
@@ -109,3 +110,4 @@ alias rvma='rvm get stable --auto-dotfiles'
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
+git config credential.helper 'cache --timeout=3600'
