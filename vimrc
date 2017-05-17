@@ -12,7 +12,6 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
-colorscheme Tomorrow-Night
 highlight SpecialKey ctermfg=1
 set incsearch
 set list
@@ -132,3 +131,4 @@ set wildmenu
 set wildmode=list:longest,full
 set undofile
 set undodir=$HOME/.vim
+colorscheme Tomorrow-Night
