@@ -41,7 +41,7 @@ nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
 nnoremap ff :NERDTreeToggle<cr>
-nnoremap <C-x> :bd<CR>
+nnoremap <C-x> :bd #<CR>
 nnoremap <C-a> ^
 nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
