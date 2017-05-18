@@ -98,9 +98,9 @@ alias md="diff --side-by-side --suppress-common-lines"
 alias rvmg='rvm gemset list'
 alias rvml='rvm list'
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
-# needs cdiff 
+# needs colordiff 
 alias ed="vim diff <(git show ) "
-alias d="diff --side-by-side --suppress-common-lines"
+alias d="colordiff -W 200 --side-by-side --suppress-common-lines"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"
