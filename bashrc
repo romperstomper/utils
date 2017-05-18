@@ -97,6 +97,8 @@ alias kp="~/utils/keypush.sh"
 alias md="diff --side-by-side --suppress-common-lines"
 alias rvmg='rvm gemset list'
 alias rvml='rvm list'
+
+LS_COLORS=$LS_COLORS:'di=0;32:' ; export LS_COLORS
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
 # needs colordiff 
 alias ed="vim diff <(git show ) "
