@@ -9,6 +9,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Yggdroot/indentLine'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -36,13 +37,18 @@ augroup END
 
 autocmd VimResized * wincmd =
 let mapleader="\\"
-noremap <leader>i :PluginInstall<cr>
+"uncomment to enable indent lines
+"let g:indentLine_enabled = 0
+nmap <leader>h :echo g:indentLine_enabled<CR>
+nmap <leader>k :let g:indentLine_enabled=0<CR>
+nmap <leader>j :let g:indentLine_enabled=1<CR>
+nmap <leader>i :PluginInstall<cr>
 noremap <leader>r @:
 noremap <leader>u <c-w>R
-nnoremap <leader><leader> <c-^> 
+nnoremap <leader><leader> <c-^>
 nnoremap <leader>p <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
-nnoremap <leader>q <esc>:q!<cr> 
+nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>v <C-w>v
@@ -56,9 +62,10 @@ nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
 nnoremap <C-n> :bnext<CR>
 nnoremap .. <C-w><C-w>
-nnoremap qq <esc>:q!<cr> 
+nnoremap qq <esc>:q!<cr>
 nnoremap ss :CtrlP<cr>
 nnoremap zz <esc>:xa<cr>
+nnoremap ee <esc>:e<CR>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
@@ -125,7 +132,7 @@ set background=dark
 set ignorecase
 set ls=2
 set mouse=a
-autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 
+autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 if has("autocmd")
   autocmd BufReadPost *
