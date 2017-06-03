@@ -38,7 +38,6 @@ ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
-alias ..="source ~/.bashrc"
 alias 'gpr'='git pull --rebase'
 alias 'gf'='git clean -f'
 alias tr=tree
@@ -73,6 +72,10 @@ alias gd='git diff'
 alias ga='git add'
 alias gaa='git add .'
 alias gbr='git branch $@;git checkout $@;touch .gitignore;git add .gitignore;git commit -m .gitignore'
+function myfunc {
+  find ./ -name $1 -print
+}
+alias f='myfunc'
 
 # history
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
@@ -97,6 +100,8 @@ alias kp="~/utils/keypush.sh"
 alias md="diff --side-by-side --suppress-common-lines"
 alias rvmg='rvm gemset list'
 alias rvml='rvm list'
+alias lg='gem list'
+alias vb='v ~/.bashrc'
 
 LS_COLORS=$LS_COLORS:'di=0;32:' ; export LS_COLORS
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
