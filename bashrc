@@ -117,4 +117,3 @@ alias rvma='rvm get stable --auto-dotfiles'
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
-git config credential.helper 'cache --timeout=3600'
