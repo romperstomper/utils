@@ -1,6 +1,7 @@
 set nocompatible
 set splitbelow
 set splitright
+set gdefault
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -31,8 +32,9 @@ augroup autoSaveAndRead
     autocmd TextChanged,InsertLeave,FocusLost * silent! wall
     autocmd CursorHold * silent! checktime
 augroup END
-"test
 
+
+autocmd VimResized * wincmd =
 let mapleader="\\"
 noremap <leader>i :PluginInstall<cr>
 noremap <leader>r @:
@@ -62,7 +64,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-imap ;; <esc>:wa<cr>
 imap <c-z> <esc><c-z><cr>
 imap <c-l> <space>=><space>
 
