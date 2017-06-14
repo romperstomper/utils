@@ -24,6 +24,14 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
+set autoread
+
+augroup autoSaveAndRead
+    autocmd!
+    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+    autocmd CursorHold * silent! checktime
+augroup END
+"test
 
 let mapleader="\\"
 noremap <leader>i :PluginInstall<cr>
@@ -45,7 +53,6 @@ nnoremap <C-a> ^
 nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
 nnoremap <C-n> :bnext<CR>
-nnoremap ;; <esc>:w<cr>
 nnoremap .. <C-w><C-w>
 nnoremap qq <esc>:q!<cr> 
 nnoremap ss :CtrlP<cr>
