@@ -38,7 +38,7 @@ augroup END
 autocmd VimResized * wincmd =
 let mapleader="\\"
 "uncomment to enable indent lines
-"let g:indentLine_enabled = 0
+let g:indentLine_enabled = 0
 nmap <leader>h :echo g:indentLine_enabled<CR>
 nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
