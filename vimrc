@@ -26,13 +26,6 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
-set autoread
-
-augroup autoSaveAndRead
-    autocmd!
-    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
-    autocmd CursorHold * silent! checktime
-augroup END
 
 
 autocmd VimResized * wincmd =
@@ -147,3 +140,10 @@ set wildmode=list:longest,full
 set undofile
 set undodir=$HOME/.vim
 colorscheme Tomorrow-Night
+set autoread
+
+augroup autoSaveAndRead
+    autocmd!
+    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+    autocmd CursorHold * silent! checktime
+augroup END
