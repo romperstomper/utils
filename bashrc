@@ -57,6 +57,7 @@ alias sagi='sudo apt-get install -y'
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 export HISTTIMEFORMAT="%F %T "
+export EDITOR=/usr/local/bin/vim
 shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
