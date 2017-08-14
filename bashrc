@@ -23,13 +23,13 @@ fi
 if [ $HOSTNAME = envy ]
   then
     #localectl set-x11-keymap us pc105 "" ctrl:nocaps
-    setxkbmap -model pc105 -layout us
-    setxkbmap -option "ctrl:nocaps"
-    # The next line updates PATH for the Google Cloud SDK.
-    source '/home/gary/google-cloud-sdk/path.bash.inc'
-    # The next line enables shell command completion for gcloud.
-    source '/home/gary/google-cloud-sdk/completion.bash.inc'
-    alias gc='gcloud compute'
+    #setxkbmap -model pc105 -layout us
+    #setxkbmap -option "ctrl:nocaps"
+    ## The next line updates PATH for the Google Cloud SDK.
+    #source '/home/gary/google-cloud-sdk/path.bash.inc'
+    ## The next line enables shell command completion for gcloud.
+    #source '/home/gary/google-cloud-sdk/completion.bash.inc'
+    #alias gc='gcloud compute'
     alias tor='cd ~/tor-browser_en-US;./start-tor-browser.desktop'
 fi
 
