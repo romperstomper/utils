@@ -42,6 +42,8 @@ ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias cdd='cd ..'
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
+alias gln='git log --name-only'
+alias gls='git log --stat'
 alias 'gpr'='git pull --rebase'
 alias 'gf'='git clean -f'
 alias tr=tree
