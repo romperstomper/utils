@@ -56,6 +56,7 @@ alias o='ssh osmc@192.168.1.148'
 alias e='~/eclipse/eclipse'
 alias edit='vim'
 alias ll='ls -la'
+alias lt='ls -t'
 alias tt='ls -lrt'
 alias sagi='sudo apt-get install -y'
 export HISTFILESIZE=1000000000
