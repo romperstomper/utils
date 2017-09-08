@@ -65,7 +65,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap ;; :w<cr>
 nnoremap ,, :b#<cr>
-nnoremap ,, :b#<cr>
 
 imap <c-z> <esc><c-z><cr>
 imap <c-l> <space>=><space>
