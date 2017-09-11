@@ -16,6 +16,7 @@ if [ $HOSTNAME = localhost ]
 then
   if ! [ -z ${DISPLAY} ]
   then
+    cp ~/utils/xmodmap_chromebook ~/.Xmodmap
     xmodmap ~/.Xmodmap
   fi
 fi
