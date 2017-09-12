@@ -45,6 +45,7 @@ alias h='history'
 alias cdd='cd ..'
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
 alias gln='git log --name-only'
+alias grl="git reflog"
 alias gap="git add -p"
 alias gls='git log --stat'
 alias 'gpr'='git pull --rebase'
