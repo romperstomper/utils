@@ -113,6 +113,7 @@ alias md="diff --side-by-side --suppress-common-lines"
 alias rvmg='rvm gemset list'
 alias rvml='rvm list'
 alias lg='gem list'
+alias sg='less +G'
 alias vb='v ~/.bashrc'
 
 LS_COLORS=$LS_COLORS:'di=0;32:' ; export LS_COLORS
