@@ -61,6 +61,7 @@ alias ll='ls -la'
 alias lt='ls -t'
 alias tt='ls -lrt'
 alias sagi='sudo apt-get install -y'
+alias sag='sudo apt-get'
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 export HISTTIMEFORMAT="%F %T "
