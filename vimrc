@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
+Plugin 'kien/ctrlp.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -57,6 +58,7 @@ nnoremap <C-n> :bnext<CR>
 nnoremap .. <C-w><C-w>
 nnoremap qq <esc>:q!<cr>
 nnoremap ss :CtrlP<cr>
+let g:ctrlp_working_path_mode = 0
 nnoremap zz <esc>:xa<cr>
 nnoremap ee <esc>:e<CR>
 nnoremap <c-j> <c-w>j
