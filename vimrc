@@ -28,7 +28,6 @@ set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
 
-
 autocmd VimResized * wincmd =
 let mapleader="\\"
 "uncomment to enable indent lines
@@ -45,7 +44,8 @@ nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
-nnoremap <leader>v <C-w>v
+nnoremap <leader>V <C-w>v
+nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
