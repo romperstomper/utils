@@ -44,10 +44,10 @@ nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
+nnoremap <leader>c :ccl<CR>
 nnoremap <leader>V <C-w>v
 nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
-nnoremap <leader>c :w<cr>:!rake vdc:upload_cb<CR><CR>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
 nnoremap ff :NERDTreeToggle<cr>
 nnoremap <C-x> :bd <CR>

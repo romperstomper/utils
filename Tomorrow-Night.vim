@@ -1,6 +1,5 @@
 " Tomorrow Night - Full Colour and 256 Colour
 " http://chriskempson.com
-"
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
@@ -17,7 +16,6 @@ let s:aqua = "8abeb7"
 let s:blue = "81a2be"
 let s:purple = "b294bb"
 let s:window = "4d5057"
-
 " Console 256 Colours
 if !has("gui_running")
 	let s:background = "303030"
