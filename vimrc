@@ -46,6 +46,7 @@ nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>c :ccl<CR>
 nnoremap <leader>V <C-w>v
+nnoremap <leader>s <C-w>h
 nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
