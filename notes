@@ -1,0 +1,1 @@
+pipe process to | wc -l in order to catch stderr messages coming through (less will take over the terminal and suppress the error messages)

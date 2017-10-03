@@ -57,6 +57,7 @@ alias v='/usr/bin/vim'
 alias o='ssh osmc@192.168.1.148'
 alias e='~/eclipse/eclipse'
 alias edit='vim'
+export EDITOR=vim
 alias ll='ls -la'
 alias lt='ls -t'
 alias tt='ls -lrt'
