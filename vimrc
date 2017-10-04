@@ -36,6 +36,7 @@ nmap <leader>h :echo g:indentLine_enabled<CR>
 nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
 nmap <leader>i :PluginInstall<cr>
+
 noremap <leader>r @:
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
