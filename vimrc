@@ -27,7 +27,6 @@ filetype plugin indent on    " required
 set pastetoggle=<insert>
 set shiftwidth=2
 set softtabstop=2
-
 autocmd VimResized * wincmd =
 let mapleader="\\"
 "uncomment to enable indent lines
@@ -36,7 +35,6 @@ nmap <leader>h :echo g:indentLine_enabled<CR>
 nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
 nmap <leader>i :PluginInstall<cr>
-
 noremap <leader>r @:
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
