@@ -2,6 +2,7 @@ set nocompatible
 set splitbelow
 set splitright
 set gdefault
+autocmd filetype crontab setlocal nobackup nowritebackup
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
