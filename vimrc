@@ -69,7 +69,6 @@ nnoremap ,, :b#<cr>
 
 imap <c-z> <esc><c-z><cr>
 imap <c-l> <space>=><space>
-imap ;; :w<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
