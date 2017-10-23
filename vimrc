@@ -45,6 +45,8 @@ nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
 nnoremap <leader>c :ccl<CR>
+nnoremap <leader>R :call RunTest()<cr>
+nnoremap <leader>t :term<cr>
 nnoremap <leader>V <C-w>v
 nnoremap <leader>s <C-w>h
 nnoremap <leader>g <leader>vv
@@ -104,7 +106,6 @@ function! RunTest()
     exec ':!rspec 'mytest
   endif
 endfunction
-nnoremap <leader>t :call RunTest()<cr>
 
 " Insert a hash rocket with <c-l>
 """"""""""""""
