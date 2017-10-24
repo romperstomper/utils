@@ -44,6 +44,7 @@ nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>s <C-w>S
+nnoremap <leader>f :! rake serverspec[false]<CR>
 nnoremap <leader>c :ccl<CR>
 nnoremap <leader>R :call RunTest()<cr>
 nnoremap <leader>t :term<cr>
