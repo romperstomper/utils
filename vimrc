@@ -49,7 +49,7 @@ nnoremap <leader>c :ccl<CR>
 nnoremap <leader>R :call RunTest()<cr>
 nnoremap <leader>t :term<cr>
 nnoremap <leader>V <C-w>v
-nnoremap <leader>s <C-w>h
+nnoremap <leader>h :sp<CR>
 nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
