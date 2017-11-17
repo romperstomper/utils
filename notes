@@ -5,3 +5,5 @@ pipe process to | wc -l in order to catch stderr messages coming through (less w
 wget -O /dev/stdout 'http://localhost:1234/snmp?module=switches_cisco_devices&target=core01.net.az1.cust.pdx.wd' | less
 
 tshark -n -i any port 161
+
+rpm2cpio [rpm] | cpio -idmv --no-absolute-filenames
