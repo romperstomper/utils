@@ -5,7 +5,6 @@ then
   cd ~/.bash
   git clone git://github.com/jimeh/git-aware-prompt.git
 fi
-
 if [ ! -d ~/.vim/bundle/Vundle.vim ]
   then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
