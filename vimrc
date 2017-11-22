@@ -25,7 +25,7 @@ set clipboard^=unnamed,unnamedplus
 set ruler
 set expandtab
 filetype plugin indent on    " required
-set pastetoggle=<insert>
+set pastetoggle=<leader>p
 set shiftwidth=2
 set softtabstop=2
 autocmd VimResized * wincmd =
@@ -39,7 +39,7 @@ nmap <leader>i :PluginInstall<cr>
 noremap <leader>r @:
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
-nnoremap <leader>p <esc>:!pwd<cr>
+nnoremap <leader>d <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
