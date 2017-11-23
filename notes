@@ -7,3 +7,15 @@ wget -O /dev/stdout 'http://localhost:1234/snmp?module=switches_cisco_devices&ta
 tshark -n -i any port 161
 
 rpm2cpio [rpm] | cpio -idmv --no-absolute-filenames
+
+Compile your class(es):
+C:\mywork> javac *.java
+Create a manifest file and your jar file:
+C:\mywork> echo Main-Class: Craps >manifest.txt
+C:\mywork> jar cvfm Craps.jar manifest.txt *.class
+or
+C:\mywork> jar cvfe Craps.jar Craps *.class
+Test your jar:
+C:\mywork> Craps.jar
+or
+C:\mywork> java -jar Craps.jar
