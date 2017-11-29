@@ -132,3 +132,4 @@ alias rvma='rvm get stable --auto-dotfiles'
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
+gsettings set org.gnome.desktop.wm.preferences audible-bell false
