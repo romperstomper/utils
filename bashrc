@@ -38,6 +38,7 @@ ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
+alias docker='sudo docker'
 alias h='history'
 alias cdd='cd ..'
 alias sr='cd ~/src'
