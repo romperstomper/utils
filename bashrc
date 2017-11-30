@@ -38,7 +38,7 @@ ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
-alias docker='sudo docker'
+alias d='sudo docker'
 alias h='history'
 alias cdd='cd ..'
 alias sr='cd ~/src'
@@ -122,12 +122,12 @@ LS_COLORS=$LS_COLORS:'di=0;32:' ; export LS_COLORS
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
 # needs colordiff 
 alias ed="vim diff <(git show ) "
-alias d="colordiff -W 200 --side-by-side --suppress-common-lines"
+alias dif="colordiff -W 200 --side-by-side --suppress-common-lines"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=/home/gary/.rvm/gems/ruby-2.2.4/bin:$PATH
+PATH=/home/gary/.rvm/gems/ruby-2.2.4/bin:$PATH:/usr/local/bin
 alias rvma='rvm get stable --auto-dotfiles'
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
