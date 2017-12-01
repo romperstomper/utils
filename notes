@@ -3,6 +3,11 @@ sudo apt-get purge --auto-remove apparmor
 sudo service docker restart
 docker system prune --all --volumes
 
+hadoop:
+format name node
+start dfs
+start yarn
+submit job with jar
 
 pipe process to | wc -l in order to catch stderr messages coming through (less will take over the terminal and suppress the error messages)
 
