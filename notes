@@ -1,3 +1,5 @@
+(echo >/dev/tcp/sparkdocker_kafka_1/9092) &>/dev/null && echo "TCP port open" || echo "TCP port close"
+
 ./bin/flink run examples/streaming/SocketWindowWordCount.jar --port 9000 --host jobmanager
 sudo apt-get purge --auto-remove apparmor
 sudo service docker restart
