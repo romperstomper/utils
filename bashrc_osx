@@ -1,0 +1,13 @@
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+export PS1="gary@mac \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+alias v='/usr/local/Cellar/vim/8.0.1400_1/bin/vim'
+alias vb='v ~/.bashrc'
+alias ..='source ~/.bashrc'
+alias sr='cd ~/src'
+alias s='~/bin/ssh'
+alias st='cd ~/src/st'
+alias dp='docker ps'
+alias g='git status'
+export PATH=$PATH:$HOME/apache-maven-3.5.2/bin
