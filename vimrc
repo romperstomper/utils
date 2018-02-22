@@ -37,6 +37,7 @@ nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
 nmap <leader>i :PluginInstall<cr>
 noremap <leader>r @:
+noremap <leader>p "+P
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>d <esc>:!pwd<cr>
