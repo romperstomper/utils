@@ -1,10 +1,15 @@
 # enable syntax completion
 try:
     import readline
+    import rlcompleter
 except ImportError:
     print("Module readline not available.")
 else:
     import rlcompleter
     readline.parse_and_bind("tab: complete")
 import os, random, sys, re, string, itertools
+if 'libedit' in readline.__doc__:
+    readline.parse_and_bind("bind ^I rl_complete")
+else:
+    readline.parse_and_bind("tab: complete")
 print('imported os, random, sys, re, string, itertools')
