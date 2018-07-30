@@ -29,6 +29,9 @@ if [ $HOSTNAME = envy ]
     #source '/home/gary/google-cloud-sdk/completion.bash.inc'
     #alias gc='gcloud compute'
 fi
+alias vb='v ~/.bashrc'
+alias vv='v ~/.vimrc'
+alias vt='v ~/.tmux.conf'
 
 mkdir -p ~/.vim/colors
 #mkdir -p ~/.i3
@@ -99,6 +102,7 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
+alias xxx="gnome-session-quit --no-prompt || xfce4-session-logout"
 alias xx="gnome-session-quit --no-prompt"
 alias ut="cd ~/utils"
 alias ll="ls -l"
