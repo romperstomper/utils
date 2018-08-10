@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
-Plugin 'dkprice/vim-easygrep'
+Plugin 'christoomey/vim-tmux-navigator'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -44,13 +44,13 @@ nnoremap <leader>d <esc>:!pwd<cr>
 nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
-nnoremap <leader>s <C-w>S
+nnoremap <leader>s <C-w>v
+nnoremap <leader>h :sp<CR>
+nnoremap <leader>o <C-w><C-o>
 nnoremap <leader>f :! rake serverspec[false]<CR>
 nnoremap <leader>c :ccl<CR>
 nnoremap <leader>R :call RunTest()<cr>
 nnoremap <leader>t :term<cr>
-nnoremap <leader>V <C-w>v
-nnoremap <leader>h :sp<CR>
 nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
@@ -64,15 +64,19 @@ nnoremap .. <C-w><C-w>
 nnoremap qq <esc>:q!<cr>
 nnoremap zz <esc>:xa<cr>
 nnoremap ee <esc>:e<CR>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
 nnoremap ;; :w<cr>
 nnoremap ,, :b#<cr>
 
 imap <c-z> <esc><c-z><cr>
-imap <c-l> <space>=><space>
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-f> :TmuxNavigatePrevious<cr>
+let g:tmux_navigator_save_on_switch = 2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
@@ -109,7 +113,6 @@ function! RunTest()
   endif
 endfunction
 
-" Insert a hash rocket with <c-l>
 """"""""""""""
 " tmux fixes "
 """"""""""""""
