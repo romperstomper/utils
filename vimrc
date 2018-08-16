@@ -50,12 +50,12 @@ nnoremap <leader>o <C-w><C-o>
 nnoremap <leader>f :! rake serverspec[false]<CR>
 nnoremap <leader>c :ccl<CR>
 nnoremap <leader>R :call RunTest()<cr>
-nnoremap <leader>t :term<cr>
+nnoremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
 nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap <leader>w :w !sudo tee > /dev/null %<cr>
 nnoremap ff :NERDTreeToggle<cr>
-nnoremap <C-x> :bd <CR>
+nnoremap <C-x> <c-w>q
 nnoremap <C-a> ^
 nnoremap <C-e> $
 nnoremap <C-m> :bprevious<CR>
@@ -148,6 +148,7 @@ set wildmenu
 set wildmode=list:longest,full
 set undofile
 set undodir=$HOME/.vim
+" let g:solarized_termcolors = 256
 colorscheme Tomorrow-Night
 set autoread
 
