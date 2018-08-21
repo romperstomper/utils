@@ -26,8 +26,8 @@ set ruler
 set expandtab
 filetype plugin indent on    " required
 set pastetoggle=<leader>p
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 autocmd VimResized * wincmd =
 let mapleader="\\"
 "uncomment to enable indent lines
