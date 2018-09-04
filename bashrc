@@ -75,7 +75,7 @@ export EDITOR=/usr/local/bin/vim
 shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
-alias t="export TERM=screen-256color && tmux"
+alias tm="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'

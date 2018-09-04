@@ -52,7 +52,7 @@ nmap <leader>i :PluginInstall!<cr>
 noremap <leader>s :split<cr>
 noremap <leader>v :vsplit<cr>
 nnoremap <leader>x :on <cr>
-nnoremap <leader>r @:
+nnoremap <leader>r @:<cr>
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>p "+P
@@ -61,7 +61,7 @@ nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
 nnoremap <leader>o <C-w><C-o>
 nnoremap <leader>c :ccl<CR>
-nnoremap <leader>R :call RunTest()<cr>
+"nnoremap <leader>R :call RunTest()<cr>
 nnoremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
 nnoremap <leader>g <leader>vv
 nnoremap <leader>. :so ~/.vimrc<cr>
