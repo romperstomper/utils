@@ -33,6 +33,8 @@ alias vb='v ~/.bashrc'
 alias vv='v ~/.vimrc'
 alias vt='v ~/.tmux.conf'
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+
 mkdir -p ~/.vim/colors
 #mkdir -p ~/.i3
 #ln -sf ~/utils/i3config ~/.i3/config
@@ -136,4 +138,4 @@ alias rvma='rvm get stable --auto-dotfiles'
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
-gsettings set org.gnome.desktop.wm.preferences audible-bell false
+#gsettings set org.gnome.desktop.wm.preferences audible-bell false

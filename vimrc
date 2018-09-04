@@ -12,8 +12,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+let g:jedi#completions_command = "<C-j>"
 
 " Write all buffers before navigating from Vim to tmux panel 1=update, 2=write all
 let g:tmux_navigator_save_on_switch = 2
@@ -36,7 +38,6 @@ autocmd VimResized * wincmd =
 let mapleader="\\"
 "uncomment to enable indent lines
 let g:indentLine_enabled = 0
-<<<<<<< Updated upstream
 nmap <leader>h :echo g:indentLine_enabled<CR>
 nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
@@ -46,11 +47,7 @@ noremap <leader>p "+P
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>d <esc>:!pwd<cr>
-=======
-"nmap <leader>h :echo g:indentLine_enabled<CR>
-"nmap <leader>k :let g:indentLine_enabled=0<CR>
-"nmap <leader>j :let g:indentLine_enabled=1<CR>
-"nmap <leader>i :PluginInstall<cr>
+nmap <leader>i :PluginInstall!<cr>
 noremap <leader>s :split<cr>
 noremap <leader>v :vsplit<cr>
 nnoremap <leader>x :on <cr>
@@ -58,7 +55,6 @@ nnoremap <leader>r @:
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>p "+P
->>>>>>> Stashed changes
 nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
@@ -81,10 +77,6 @@ nnoremap .. <C-w><C-w>
 nnoremap qq <esc>:q!<cr>
 nnoremap zz <esc>:xa<cr>
 nnoremap ee <esc>:e<CR>
-"nnoremap <c-j> <c-w>j
-"nnoremap <c-k> <c-w>k
-"nnoremap <c-h> <c-w>h
-"nnoremap <c-l> <c-w>l
 nnoremap ;; :w<cr>
 nnoremap ,, :b#<cr>
 imap <c-z> <esc><c-z><cr>
