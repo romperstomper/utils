@@ -2,6 +2,7 @@ set nocompatible
 set splitbelow
 set splitright
 set gdefault
+colorscheme Tomorrow-Night
 autocmd filetype crontab setlocal nobackup nowritebackup
 filetype off
 " set the runtime path to include Vundle and initialize
@@ -58,8 +59,6 @@ nnoremap <leader>p "+P
 nnoremap <leader>e /\s\+$<cr>
 nnoremap <leader>q <esc>:q!<cr>
 nnoremap <leader>l <esc>:ls<CR>
-nnoremap <leader>s <C-w>S
-nnoremap <leader>s <C-w>v
 nnoremap <leader>o <C-w><C-o>
 nnoremap <leader>c :ccl<CR>
 nnoremap <leader>R :call RunTest()<cr>
@@ -114,57 +113,18 @@ inoremap " ""<Esc>i
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Run Test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RunTest()
-  let line_number = line('.')
-  if line_number == '1'
-    exec ':!rspec 'expand('%')
-  else
-    let mytest = expand('%').":".line('.')
-    exec ':!rspec 'mytest
-  endif
-endfunction
+"function! RunTest()
+"  let line_number = line('.')
+"  if line_number == '1'
+"    exec ':!rspec 'expand('%')
+"  else
+"    let mytest = expand('%').":".line('.')
+"    exec ':!rspec 'mytest
+"  endif
+"endfunction
 
 """"""""""""""
 " tmux fixes "
 """"""""""""""
-" Handle tmux $TERM quirks in vim
-if $TERM =~ '^screen-256color'
-    map <Esc>OH <Home>
-    map! <Esc>OH <Home>
-    map <Esc>OF <End>
-    map! <Esc>OF <End>
-endif
-
-
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%99v.\+/
-
-" use 256 colors (must be supported by xterm and screen)
-set t_Co=256
-set background=dark
-set ignorecase
-set ls=2
-set mouse=a
-autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
-if has("autocmd")
-  autocmd BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-      \   exe "normal g`\"" |
-      \ endif
-endif
-
-" Better file completion
-set wildmenu
-set wildmode=list:longest,full
-set undofile
-set undodir=$HOME/.vim
-" let g:solarized_termcolors = 256
-colorscheme Tomorrow-Night
-set autoread
-
-augroup autoSaveAndRead
-    autocmd!
-    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
-    autocmd CursorHold * silent! checktime
-augroup END
