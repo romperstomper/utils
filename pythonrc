@@ -7,9 +7,9 @@ except ImportError:
 else:
     import rlcompleter
     readline.parse_and_bind("tab: complete")
-import os, random, sys, re, string, itertools
+import os, random, socket, sys, re, string, itertools
 if 'libedit' in readline.__doc__:
     readline.parse_and_bind("bind ^I rl_complete")
 else:
     readline.parse_and_bind("tab: complete")
-print('imported os, random, sys, re, string, itertools')
+print('imported os, random, socket, sys, re, string, itertools')
