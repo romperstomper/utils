@@ -10,6 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -43,6 +44,7 @@ nmap <leader>h :echo g:indentLine_enabled<CR>
 nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
 nmap <leader>i :PluginInstall<cr>
+nmap <leader>b :Gblame<cr>
 noremap <leader>r @:
 noremap <leader>p "+P
 noremap <leader>u <c-w>R
