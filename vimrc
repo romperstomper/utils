@@ -43,7 +43,7 @@ let g:indentLine_enabled = 0
 nmap <leader>h :echo g:indentLine_enabled<CR>
 nmap <leader>k :let g:indentLine_enabled=0<CR>
 nmap <leader>j :let g:indentLine_enabled=1<CR>
-nmap <leader>i :PluginInstall<cr>
+nmap <leader>i :PluginInstall!<cr>
 nmap <leader>b :Gblame<cr>
 noremap <leader>r @:
 noremap <leader>p "+P
@@ -53,7 +53,7 @@ nnoremap <leader>d <esc>:!pwd<cr>
 nmap <leader>i :PluginInstall!<cr>
 noremap <leader>s :split<cr>
 noremap <leader>v :vsplit<cr>
-nnoremap <leader>x :on <cr>
+nnoremap <leader>x :bd <cr>
 nnoremap <leader>r @:<cr>
 noremap <leader>u <c-w>R
 nnoremap <leader><leader> <c-^>
@@ -130,3 +130,4 @@ inoremap " ""<Esc>i
 """"""""""""""
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%99v.\+/
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4

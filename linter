@@ -1,0 +1,18 @@
+import sys
+from pylint import lint
+
+THRESHOLD = 7
+
+
+class LinterError(Exception):
+    pass
+
+
+if len(sys.argv) < 2:
+    raise LinterError("Module to evaluate needs to be the first argument")
+
+run = lint.Run([sys.argv[1]], do_exit=False)
+score = run.linter.stats['global_note']
+
+if score < THRESHOLD:
+    sys.exit(1)
