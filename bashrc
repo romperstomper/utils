@@ -29,6 +29,11 @@ if [ $HOSTNAME = envy ]
     #source '/home/gary/google-cloud-sdk/completion.bash.inc'
     #alias gc='gcloud compute'
 fi
+alias vb='v ~/.bashrc'
+alias vv='v ~/.vimrc'
+alias vt='v ~/.tmux.conf'
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 mkdir -p ~/.vim/colors
 #mkdir -p ~/.i3
@@ -71,7 +76,7 @@ export EDITOR=/usr/local/bin/vim
 shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
-alias t="export TERM=screen-256color && tmux"
+alias tm="export TERM=screen-256color && tmux"
 export PYTHONSTARTUP=~/.pythonrc
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
@@ -100,6 +105,7 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
+alias xxx="gnome-session-quit --no-prompt || xfce4-session-logout"
 alias xx="gnome-session-quit --no-prompt"
 alias ut="cd ~/utils"
 alias ll="ls -l"
@@ -132,4 +138,4 @@ PATH=/opt/python/python3.4.9/bin/python3:$PATH
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
-gsettings set org.gnome.desktop.wm.preferences audible-bell false
+#gsettings set org.gnome.desktop.wm.preferences audible-bell false
