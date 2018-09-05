@@ -40,7 +40,7 @@ ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
 alias d='sudo docker'
 alias h='history'
-alias cdd='cd ..'
+alias cdd='cd ~/Downloads'
 alias sr='cd ~/src'
 alias ej='udisksctl unmount -b /dev/sdb1;udisksctl power-off -b /dev/sdb'
 alias gln='git log --name-only'
@@ -52,7 +52,8 @@ alias 'gf'='git clean -f'
 alias tr=tree
 alias irbb='irb --simple-prompt'
 alias acs='apt-cache search'
-alias p='cd ~/pi'
+alias acsh='apt-cache show'
+alias p=python3
 alias v='/usr/bin/vim'
 alias o='ssh osmc@192.168.1.148'
 alias e='~/eclipse/eclipse'
@@ -117,6 +118,8 @@ alias rvml='rvm list'
 alias lg='gem list'
 alias sg='less +G'
 alias vb='v ~/.bashrc'
+alias vv='v ~/.vimrc'
+alias b=bpython
 
 LS_COLORS=$LS_COLORS:'di=0;32:' ; export LS_COLORS
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
@@ -124,11 +127,8 @@ alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -
 alias ed="vim diff <(git show ) "
 alias dif="colordiff -W 200 --side-by-side --suppress-common-lines"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=/home/gary/.rvm/gems/ruby-2.2.4/bin:$PATH:/usr/local/bin
-alias rvma='rvm get stable --auto-dotfiles'
+alias p34=/opt/python/python3.4.9/bin/python3
+PATH=/opt/python/python3.4.9/bin/python3:$PATH
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
