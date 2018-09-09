@@ -74,6 +74,7 @@ noremap <C-a> ^
 noremap <C-e> $
 noremap <C-m> :bprevious<CR>
 noremap <C-n> :bnext<CR>
+noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' \| :redraw! <cr>
 noremap .. <C-w><C-w>
 noremap qq <esc>:q!<cr>
 noremap zz <esc>:xa<cr>
