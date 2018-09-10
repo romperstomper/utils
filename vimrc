@@ -64,7 +64,7 @@ noremap <leader>o <C-w><C-o>
 "nnoremap <leader>R :call RunTest()<cr>
 "noremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
 "noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' | :execute redraw!
-noremap <leader>t :exec 'silent !echo "python3.4 -m unittest %" > thefifo'\| :exec 'redraw!' <cr>
+noremap <leader>t :exec 'silent !echo "python3 -m unittest %" > thefifo'\| :exec 'redraw!' <cr>
 noremap <leader>g <leader>vv
 noremap <leader>. :so ~/.vimrc<cr>
 noremap <leader>w :w !sudo tee > /dev/null %<cr>
@@ -73,9 +73,9 @@ noremap ff :NERDTreeToggle<cr>
 noremap <C-x> <c-w>q
 noremap <C-a> ^
 noremap <C-e> $
-noremap <C-,> :bprevious<CR>
-noremap <C-.> :bnext<CR>
-noremap .. <C-w><C-w>
+noremap .. :bprevious<CR>
+noremap ,, :bnext<CR>
+noremap <Space> <C-w><C-w>
 noremap qq <esc>:q!<cr>
 noremap zz <esc>:xa<cr>
 noremap ee <esc>:e<CR>

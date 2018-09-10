@@ -1,6 +1,6 @@
-if [ -p thefifo ];then
+if [[ -p "thefifo" ]];then
     rm -f thefifo
 fi
 mkfifo thefifo
 
-while true;do sh -c "$(cat testfifo)";done
+while true;do sh -c "$(cat thefifo)";done
