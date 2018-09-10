@@ -37,7 +37,7 @@ set pastetoggle=<leader>p
 set shiftwidth=4
 set softtabstop=4
 autocmd VimResized * wincmd =
-let mapleader="\\"
+let mapleader=";"
 "uncomment to enable indent lines
 let g:indentLine_enabled = 0
 noremap <leader>h :echo g:indentLine_enabled<CR>
@@ -61,26 +61,25 @@ noremap <leader>e /\s\+$<cr>
 noremap <leader>q <esc>:q!<cr>
 noremap <leader>l <esc>:ls<CR>
 noremap <leader>o <C-w><C-o>
-noremap <leader>c :ccl<CR>
 "nnoremap <leader>R :call RunTest()<cr>
-noremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
+"noremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
+"noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' | :execute redraw!
+noremap <leader>t :exec 'silent !echo "python3.4 -m unittest %" > thefifo'\| :exec 'redraw!' <cr>
 noremap <leader>g <leader>vv
 noremap <leader>. :so ~/.vimrc<cr>
 noremap <leader>w :w !sudo tee > /dev/null %<cr>
-noremap <leader>y y|:@" <cr>
+""noremap <leader>y y|:@" <cr>
 noremap ff :NERDTreeToggle<cr>
 noremap <C-x> <c-w>q
 noremap <C-a> ^
 noremap <C-e> $
-noremap <C-m> :bprevious<CR>
-noremap <C-n> :bnext<CR>
-noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' \| :redraw! <cr>
+noremap <C-,> :bprevious<CR>
+noremap <C-.> :bnext<CR>
 noremap .. <C-w><C-w>
 noremap qq <esc>:q!<cr>
 noremap zz <esc>:xa<cr>
 noremap ee <esc>:e<CR>
 noremap ;; :w<cr>
-noremap ,, :b#<cr>
 imap <c-z> <esc><c-z><cr>
 
 let g:tmux_navigator_no_mappings = 1
