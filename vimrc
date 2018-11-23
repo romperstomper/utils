@@ -37,7 +37,7 @@ set pastetoggle=<leader>p
 set shiftwidth=4
 set softtabstop=4
 autocmd VimResized * wincmd =
-let mapleader="\\"
+let mapleader=";"
 "uncomment to enable indent lines
 let g:indentLine_enabled = 0
 noremap <leader>h :echo g:indentLine_enabled<CR>
