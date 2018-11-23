@@ -52,8 +52,8 @@ noremap <leader>d <esc>:!pwd<cr>
 noremap <leader>i :PluginInstall!<cr>
 noremap <leader>s :split<cr>
 noremap <leader>v :vsplit<cr>
-noremap <leader>x :on <cr>
-noremap <leader>r @:<cr>
+nnoremap <leader>x :bd <cr>
+nnoremap <leader>r @:<cr>
 noremap <leader>u <c-w>R
 noremap <leader><leader> <c-^>
 noremap <leader>p "+P
@@ -61,26 +61,25 @@ noremap <leader>e /\s\+$<cr>
 noremap <leader>q <esc>:q!<cr>
 noremap <leader>l <esc>:ls<CR>
 noremap <leader>o <C-w><C-o>
-noremap <leader>c :ccl<CR>
 "nnoremap <leader>R :call RunTest()<cr>
-noremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
+"noremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
+"noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' | :execute redraw!
+noremap <leader>t :exec 'silent !echo "python3 -m unittest %" > thefifo'\| :exec 'redraw!' <cr>
 noremap <leader>g <leader>vv
 noremap <leader>. :so ~/.vimrc<cr>
 noremap <leader>w :w !sudo tee > /dev/null %<cr>
-noremap <leader>y y|:@" <cr>
+""noremap <leader>y y|:@" <cr>
 noremap ff :NERDTreeToggle<cr>
 noremap <C-x> <c-w>q
 noremap <C-a> ^
 noremap <C-e> $
-noremap <C-m> :bprevious<CR>
-noremap <C-n> :bnext<CR>
-noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' \| :redraw! <cr>
-noremap .. <C-w><C-w>
+noremap .. :bprevious<CR>
+noremap ,, :bnext<CR>
+noremap <Space> <C-w><C-w>
 noremap qq <esc>:q!<cr>
 noremap zz <esc>:xa<cr>
 noremap ee <esc>:e<CR>
 noremap ;; :w<cr>
-noremap ,, :b#<cr>
 imap <c-z> <esc><c-z><cr>
 
 let g:tmux_navigator_no_mappings = 1
@@ -131,3 +130,4 @@ inoremap " ""<Esc>i
 """"""""""""""
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%99v.\+/
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4

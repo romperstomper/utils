@@ -43,6 +43,7 @@ ln -sf ~/utils/pythonrc ~/.pythonrc
 ln -sf ~/utils/vimrc ~/.vimrc
 ln -sf ~/utils/gemrc ~/.gemrc
 ln -sf ~/utils/gitconfig ~/.gitconfig
+alias reg='echo "ps aux | grep java|grep -oP \"wday\s+\K(\d+)(?=\s)\""'
 alias d='sudo docker'
 alias h='history'
 alias cdd='cd ~/Downloads'
