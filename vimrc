@@ -14,7 +14,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 let g:jedi#completions_command = "<C-j>"
@@ -128,6 +128,6 @@ inoremap " ""<Esc>i
 """"""""""""""
 " tmux fixes "
 """"""""""""""
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%99v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%99v.\+/
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4

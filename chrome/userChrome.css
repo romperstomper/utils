@@ -1,0 +1,17 @@
+#navigator-toolbox {
+    position: relative;
+    z-index: 1;
+    height: 6px;
+    margin-bottom: -3px;
+    overflow: hidden;
+    transition-property: height;
+    transition-delay: 1s;
+    transition-duration: 0.2s;
+}
+
+#navigator-toolbox:hover {
+    height: 62px;
+    transition-property: height;
+    transition-duration: 0.1s;
+    transition-delay: 0s;
+}
