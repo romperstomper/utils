@@ -1,4 +1,6 @@
 # .bashrc
+alias vb='vim ~/.bashrc'
+alias l='ls -1'
 if [ ! -f ~/.bash/git-aware-prompt/prompt.sh ]
 then
   mkdir ~/.bash
