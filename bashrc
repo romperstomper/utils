@@ -1,4 +1,7 @@
 # .bashrc
+alias gpo='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
+alias vb='vim ~/.bashrc'
+alias l='ls -1'
 if [ ! -f ~/.bash/git-aware-prompt/prompt.sh ]
 then
   mkdir ~/.bash

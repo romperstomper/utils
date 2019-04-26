@@ -130,4 +130,19 @@ inoremap " ""<Esc>i
 """"""""""""""
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%99v.\+/
+"PEP8 style
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+source $VIMRUNTIME/vimrc_example.vim
+set viminfo='10,\"100,:20,%,n~/.viminfo
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
