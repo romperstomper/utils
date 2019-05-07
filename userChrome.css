@@ -1,22 +1,24 @@
-#navigator-toolbox {
-    height: 0.5rem;
-    margin-bottom: -0.5rem;
-    opacity: 0;
-    overflow: hidden;
+/* hides the native tabs */
+/*#TabsToolbar {*/
+/*  visibility: collapse;*/
+/*}*/
+#titlebar {
+  visibility: collapse;
 }
-
-#navigator-toolbox:hover,
-#navigator-toolbox:focus-within {
-    /*
-     * Add some padding between the navbar and the top screen edge 
-     * to be more visible while the macOS hidden menu bar shows up. 
-     * The macOS menubar will hide after a few seconds.
-     */
-    padding-top: 0rem;
-    height: auto;
-    margin-bottom: 0rem;
-    opacity: 1;
-    overflow: visible;
+#nav-bar toolbarbutton, #search-container, 
+#stop-reload-button {
+  display: none !important;
+}
+#nav-bar {
+  min-height: 0px !important;
+}
+/* Hide Address bar when NOT focused (e.g., F6) */
+#urlbar:not([focused]), #urlbar:not([focused]) * {
+  min-height: 0 !important;
+  max-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important; 
+  border: none !important;
 }
 :-moz-any(#content,#appcontent) browser{
  margin-right:-14px!important;

@@ -136,3 +136,17 @@ inoremap " ""<Esc>i
 "match OverLength /\%99v.\+/
 autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 ":map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+"PEP8 style
+source $VIMRUNTIME/vimrc_example.vim
+set viminfo='10,\"100,:20,%,n~/.viminfo
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
