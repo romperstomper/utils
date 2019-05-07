@@ -130,6 +130,7 @@ alias sg='less +G'
 alias vb='v ~/.bashrc'
 alias vv='v ~/.vimrc'
 alias b=bpython
+alias wp="cd ~/wip"
 
 LS_COLORS=$LS_COLORS:'di=0;32:' ; export LS_COLORS
 alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -'
