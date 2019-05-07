@@ -14,11 +14,14 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
-"Plugin 'davidhalter/jedi-vim'
+"Plugin 'deoplete-plugins/deoplete-jedi'
+Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 let g:jedi#completions_command = "<C-j>"
 let g:jedi#rename_command = "<leader>]"
+set undodir=~/.vim/undodir
+set undofile
 
 " Write all buffers before navigating from Vim to tmux panel 1=update, 2=write all
 let g:tmux_navigator_save_on_switch = 2
@@ -30,7 +33,8 @@ set incsearch
 set list
 set listchars=tab:T>
 " cross-platform way to share the vim clipboard with the system clipboard
-set clipboard^=unnamed,unnamedplus
+""set clipboard^=unnamed,unnamedplus
+set clipboard+=unnamed
 set ruler
 set expandtab
 set pastetoggle=<leader>p
@@ -130,4 +134,5 @@ inoremap " ""<Esc>i
 """"""""""""""
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%99v.\+/
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+":map <F2> :echo 'Current time is ' . strftime('%c')<CR>
