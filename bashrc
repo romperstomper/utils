@@ -100,6 +100,15 @@ function myfunc {
   find ./ -name $1 -print
 }
 alias f='myfunc'
+function testfifo {
+    if [ ! -p testfifo ]; then
+        mkfifo testfifo
+    fi
+    while true; do
+        sh -c "$(cat testfifo)"
+    done
+}
+alias testfifo='testfifo'
 
 # history
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
@@ -120,7 +129,7 @@ alias nn="nc -vz"
 alias s="ssh"
 alias la="ssh 104.199.45.88 -l gary"
 alias s='ssh "-o StrictHostKeyChecking no"'
-alias gu='git commit -m "utils"; git push'
+alias gu='git commit -m "update"; git push'
 alias kp="~/utils/keypush.sh"
 alias md="diff --side-by-side --suppress-common-lines"
 alias rvmg='rvm gemset list'
