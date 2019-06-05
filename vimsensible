@@ -1,0 +1,29 @@
+runtime! plugin/sensible.vim
+colorscheme Tomorrow-Night
+autocmd InsertLeave * write
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run Test
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"function! RunTest()
+"  let line_number = line('.')
+"  if line_number == '1'
+"    exec ':!rspec 'expand('%')
+"  else
+"    let mytest = expand('%').":".line('.')
+"    exec ':!rspec 'mytest
+"  endif
+"endfunction
+let mapleader=";"
+map ;c :w !pbcopy<cr>
+nnoremap <leader><leader> :w<cr>
+nnoremap <leader>p "+P
+inoremap <leader>p "+P
+nnoremap <leader>q :x<cr>
+nnoremap ;r :w\|:!python3 %<cr>
+inoremap ;r <esc>:w\|:!python3 %<cr>
+noremap <leader>s :split<cr>
+noremap <leader>v :vsplit<cr>
+nnoremap <leader>x :bd <cr>
+nnoremap <leader>;. :so ~/.vimrc<cr>
+nnoremap .. :bnext<cr>
+nnoremap ,, :bprevious<cr>

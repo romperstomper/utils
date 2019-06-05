@@ -14,14 +14,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'christoomey/vim-tmux-navigator'
-"Plugin 'deoplete-plugins/deoplete-jedi'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 let g:jedi#completions_command = "<C-j>"
 let g:jedi#rename_command = "<leader>]"
-set undodir=~/.vim/undodir
-set undofile
+noremap ;m :!echo "hi "<cr>
 
 " Write all buffers before navigating from Vim to tmux panel 1=update, 2=write all
 let g:tmux_navigator_save_on_switch = 2
@@ -33,8 +31,7 @@ set incsearch
 set list
 set listchars=tab:T>
 " cross-platform way to share the vim clipboard with the system clipboard
-""set clipboard^=unnamed,unnamedplus
-set clipboard+=unnamed
+set clipboard^=unnamed,unnamedplus
 set ruler
 set expandtab
 set pastetoggle=<leader>p
@@ -44,13 +41,12 @@ autocmd VimResized * wincmd =
 let mapleader=";"
 "uncomment to enable indent lines
 let g:indentLine_enabled = 0
-nnoremap <F3> :set hlsearch!<CR>
 noremap <leader>h :echo g:indentLine_enabled<CR>
 noremap <leader>j :let g:indentLine_enabled=1<CR>
 noremap <leader>k :let g:indentLine_enabled=0<CR>
 noremap <leader>i :PluginInstall<cr>
 noremap <leader>b :Gblame<cr>
-noremap <leader>r @:
+noremap ;r :w\|:!python3 %<cr>
 noremap <leader>u <c-w>R
 noremap <leader><leader> <c-^>
 noremap <leader>d <esc>:!pwd<cr>
@@ -67,9 +63,9 @@ noremap <leader>q <esc>:q!<cr>
 noremap <leader>l <esc>:ls<CR>
 noremap <leader>o <C-w><C-o>
 "nnoremap <leader>R :call RunTest()<cr>
-noremap <leader>t :!python3 %<cr>
+"noremap <leader>t :exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr> 
 "noremap <C-t> :execute 'silent !echo "python3.4 -m unittest %" > runtests' | :execute redraw!
-noremap <leader>f :exec 'silent !echo "python3 -m unittest %" > testfifo'\| :exec 'redraw!' <cr>
+noremap <leader>f :exec 'silent !echo "python3 -m unittest %" > thefifo'\| :exec 'redraw!' <cr>
 noremap <leader>g <leader>vv
 noremap <leader>. :so ~/.vimrc<cr>
 noremap <leader>w :w !sudo tee > /dev/null %<cr>
@@ -81,8 +77,8 @@ noremap <C-e> $
 noremap .. :bprevious<CR>
 noremap ,, :bnext<CR>
 noremap <Space> <C-w><C-w>
-noremap Q <esc>:q!<cr>
-noremap qq <esc>:xa<cr>
+noremap qq <esc>:x<cr>
+noremap X <esc>:q!<cr>
 noremap ee <esc>:e<CR>
 noremap ;; :w<cr>
 imap <c-z> <esc><c-z><cr>
@@ -135,19 +131,10 @@ inoremap " ""<Esc>i
 """"""""""""""
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%99v.\+/
-autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-":map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-"PEP8 style
-source $VIMRUNTIME/vimrc_example.vim
-set viminfo='10,\"100,:20,%,n~/.viminfo
-function! ResCur()
-  if line("'\"") <= line("$")
-    normal! g`"
-    return 1
-  endif
-endfunction
-
-augroup resCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
