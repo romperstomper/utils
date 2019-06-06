@@ -67,7 +67,6 @@ alias edit='vim'
 export EDITOR=vim
 alias ll='ls -la'
 alias lt='ls -t'
-alias tt='ls -lrt'
 alias sagi='sudo apt-get install -y'
 alias sag='sudo apt-get'
 export HISTFILESIZE=1000000000
@@ -77,7 +76,8 @@ export EDITOR=/usr/local/bin/vim
 shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
-alias tm="export TERM=screen-256color && tmux -u"
+alias tm="export TERM=screen-256color;tmux -u new -s code \; split-window -h"
+alias tt="tmux -u new -s code \; split-window -h"
 export PYTHONSTARTUP=~/.pythonrc
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
