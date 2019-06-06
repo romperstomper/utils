@@ -24,6 +24,10 @@ inoremap ;r <esc>:w\|:!python3 %<cr>
 noremap <leader>s :split<cr>
 noremap <leader>v :vsplit<cr>
 nnoremap <leader>x :bd <cr>
-nnoremap <leader>;. :so ~/.vimrc<cr>
+nnoremap <leader>. :so ~/.vimrc<cr>
 nnoremap .. :bnext<cr>
 nnoremap ,, :bprevious<cr>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l

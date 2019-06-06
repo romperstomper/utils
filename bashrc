@@ -1,9 +1,6 @@
 # .bashrc
-<<<<<<< Updated upstream
 alias gpo='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 alias vb='vim ~/.bashrc'
-=======
->>>>>>> Stashed changes
 alias l='ls -1'
 if [ ! -f ~/.bash/git-aware-prompt/prompt.sh ]
 then
@@ -46,9 +43,6 @@ mkdir -p ~/.vim/colors
 #ln -sf ~/utils/i3config ~/.i3/config
 ln -sf ~/utils/Tomorrow-Night.vim ~/.vim/colors/Tomorrow-Night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
-ln -sf ~/utils/vimrc ~/.vimrc
-ln -sf ~/utils/gemrc ~/.gemrc
-ln -sf ~/utils/gitconfig ~/.gitconfig
 alias reg='echo "ps aux | grep java|grep -oP \"wday\s+\K(\d+)(?=\s)\""'
 alias d='sudo docker'
 alias h='history'
@@ -83,7 +77,7 @@ export EDITOR=/usr/local/bin/vim
 shopt -s cmdhist
 shopt -s histappend
 export TERM=screen-256color
-alias tm="export TERM=screen-256color && tmux"
+alias tm="export TERM=screen-256color && tmux -u"
 export PYTHONSTARTUP=~/.pythonrc
 alias gs='git diff --stat --cached origin/master'
 alias c='2>/dev/null google-chrome-stable &'
@@ -141,7 +135,6 @@ alias rvml='rvm list'
 alias lg='gem list'
 alias sg='less +G'
 alias vb='v ~/.bashrc'
-alias vv='v ~/.vimrc'
 alias b=bpython
 alias wp="cd ~/wip"
 
