@@ -1,6 +1,9 @@
 # .bashrc
+<<<<<<< Updated upstream
 alias gpo='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 alias vb='vim ~/.bashrc'
+=======
+>>>>>>> Stashed changes
 alias l='ls -1'
 if [ ! -f ~/.bash/git-aware-prompt/prompt.sh ]
 then
@@ -115,7 +118,8 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 
 # git aware prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
-export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+#export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
 alias xxx="gnome-session-quit --no-prompt || xfce4-session-logout"
