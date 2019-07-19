@@ -37,7 +37,14 @@ alias vv='v ~/.vimrc'
 alias vt='v ~/.tmux.conf'
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-
+dk (){
+  pid=`docker ps|tail -n 1|cut -d " " -f 1`
+  docker kill $pid
+}
+de (){
+  pid=`docker ps|tail -n 1|cut -d " " -f 1`
+  docker exec -it $pid bash
+}
 mkdir -p ~/.vim/colors
 #mkdir -p ~/.i3
 #ln -sf ~/utils/i3config ~/.i3/config
@@ -45,6 +52,8 @@ ln -sf ~/utils/Tomorrow-Night.vim ~/.vim/colors/Tomorrow-Night.vim
 ln -sf ~/utils/pythonrc ~/.pythonrc
 alias reg='echo "ps aux | grep java|grep -oP \"wday\s+\K(\d+)(?=\s)\""'
 alias d='sudo docker'
+alias di='docker images'
+alias dps='docker ps'
 alias h='history'
 alias cdd='cd ~/Downloads'
 alias sr='cd ~/src'
