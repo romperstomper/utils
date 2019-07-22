@@ -1,6 +1,20 @@
 runtime! plugin/sensible.vim
 colorscheme Tomorrow-Night
 autocmd InsertLeave * write
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+set nobackup
+set nowritebackup
+set swapfile
+set directory^=~/.vim/swap//
+set undofile
+set undodir^=~/.vim/undo//
+set virtualedit=all
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Run Test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -12,13 +26,16 @@ autocmd InsertLeave * write
 "    let mytest = expand('%').":".line('.')
 "    exec ':!rspec 'mytest
 "  endif
-"endfunction
+"  strlen(glob("test/**/*.py")
+" if strlen(glob("test/**/*.py") . glob("tests/**/*.py"))
+"end
 let mapleader=";"
 map ;c :w !pbcopy<cr>
 nnoremap <leader><leader> :w<cr>
 nnoremap <leader>p "+P
 inoremap <leader>p "+P
 nnoremap <leader>q :x<cr>
+nnoremap ;t :!python3 test_%<cr>
 nnoremap ;r :w\|:!python3 %<cr>
 inoremap ;r <esc>:w\|:!python3 %<cr>
 noremap <leader>s :split<cr>
@@ -31,3 +48,4 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
