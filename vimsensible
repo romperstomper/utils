@@ -1,4 +1,6 @@
 runtime! plugin/sensible.vim
+set nobackup
+set nowritebackup
 colorscheme Tomorrow-Night
 autocmd InsertLeave * write
 filetype plugin indent on
@@ -35,7 +37,7 @@ nnoremap <leader><leader> :w<cr>
 nnoremap <leader>p "+P
 inoremap <leader>p "+P
 nnoremap <leader>q :x<cr>
-nnoremap ;t :!python3 test_%<cr>
+nnoremap ;t :w\|:!python3 test_%<cr>
 nnoremap ;r :w\|:!python3 %<cr>
 inoremap ;r <esc>:w\|:!python3 %<cr>
 noremap <leader>s :split<cr>
