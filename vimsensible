@@ -12,7 +12,8 @@ set shiftwidth=4
 set expandtab
 set nobackup
 set nowritebackup
-set swapfile
+set noswapfile
+set noundofile
 set directory^=~/.vim/swap//
 set undofile
 set undodir^=~/.vim/undo//

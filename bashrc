@@ -1,4 +1,7 @@
 # .bashrc
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 alias gpo='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 alias vb='vim ~/.bashrc'
 alias l='ls -1'
@@ -121,8 +124,7 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 
 # git aware prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
-export PS1="\[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-#export PS1="\u@\[\033[01;32m\]\h \[\033[00m\]\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\[\033[00m\]\W\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 source "${GITAWAREPROMPT}/main.sh"
 
 alias xxx="gnome-session-quit --no-prompt || xfce4-session-logout"
@@ -152,10 +154,3 @@ alias mydiff='git show HEAD^:/path/to/file | diff --side-by-side /path/to/file -
 # needs colordiff 
 alias ed="vim diff <(git show ) "
 alias dif="colordiff -W 200 --side-by-side --suppress-common-lines"
-
-alias p34=/opt/python/python3.4.9/bin/python3
-PATH=/opt/python/python3.4.9/bin/python3:$PATH
-
-#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
-stty -ixon
-#gsettings set org.gnome.desktop.wm.preferences audible-bell false
