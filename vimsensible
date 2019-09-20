@@ -1,7 +1,6 @@
 runtime! plugin/sensible.vim
-set nobackup
-set nowritebackup
 colorscheme Tomorrow-Night
+set backupdir=~/.vim/backup
 autocmd InsertLeave * write
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -10,8 +9,6 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
-set nobackup
-set nowritebackup
 set noswapfile
 set noundofile
 set directory^=~/.vim/swap//
