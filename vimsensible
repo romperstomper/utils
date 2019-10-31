@@ -1,21 +1,7 @@
 runtime! plugin/sensible.vim
 colorscheme Tomorrow-Night
-set nobackup
-set nowritebackup
 autocmd InsertLeave * write
-filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
-set noswapfile
-set noundofile
-set directory^=~/.vim/swap//
-set undofile
-set undodir^=~/.vim/undo//
-set virtualedit=all
+autocmd FileType python setlocal smartindent shiftwidth=2 softtabstop=2 expandtab
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Run Test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,4 +35,4 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
+  
