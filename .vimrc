@@ -5,11 +5,14 @@ Plug 'davidhalter/jedi-vim',  {'for': 'python'}
 call plug#end()
 filetype plugin indent on
 colo Tomorrow-Night
+set statusline=%F
 let mapleader =";"
 noremap ;; :w<cr>
 nmap ,, :bp<cr>
 nmap .. :bn<cr>
 nmap ss :source ~/.vimrc<cr>
-nmap <leader>r :!python3 %<cr>
+nmap @@ @:
 nmap pp :PlugStatus<cr>
-nmap <leader>g :!go build % <cr> \|:!./%:r<cr>
+nmap ` <C-w><C-w>
+nmap <leader>v :vsplit<cr>
+
