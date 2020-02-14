@@ -1,3 +1,4 @@
+nmap <leader>g :!go build % <cr> \|:!./%:r<cr>
 " This file represents the minimal .vimrc needed to work with govim.
 "
 " We also include a number of suggested settings that we think the majority of

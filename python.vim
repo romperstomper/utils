@@ -1,3 +1,8 @@
+let mapleader =";"
+nmap <leader>t :!python3 %<cr>
+nmap tt :!python3 test_%<cr>
+nmap <leader>b :Gblame<cr>
+nmap <leader>y :!pylint %<cr>
 " if hidden is not set, TextEdit might fail.
 set hidden
 

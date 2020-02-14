@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'for': 'python', 'branch': 'release'}
 Plug 'davidhalter/jedi-vim',  {'for': 'python'}
 call plug#end()
@@ -15,4 +16,4 @@ nmap @@ @:
 nmap pp :PlugStatus<cr>
 nmap ` <C-w><C-w>
 nmap <leader>v :vsplit<cr>
-
+nmap <leader>x :only<cr>
