@@ -16,4 +16,5 @@ nmap @@ @:
 nmap pp :PlugStatus<cr>
 nmap ` <C-w><C-w>
 nmap <leader>v :vsplit<cr>
-nmap <leader>x :only<cr>
+nmap <leader>x `<cr> \| :only<cr>
+nmap <leader>b :Gblame<cr>
