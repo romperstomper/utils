@@ -18,3 +18,4 @@ nmap ` <C-w><C-w>
 nmap <leader>v :vsplit<cr>
 nmap <leader>x `<cr> \| :only<cr>
 nmap <leader>b :Gblame<cr>
+nmap <leader>2 :!python %<cr>
