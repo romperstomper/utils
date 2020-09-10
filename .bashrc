@@ -120,12 +120,12 @@ alias sagi='sudo apt-get install -y'
 alias v='vim'
 alias p='python3'
 alias vb='v ~/.bashrc'
-alias vv='v ~/.vimrc'
+alias vv='v ~/.vim/vimrc'
 alias ..='source ~/.bashrc'
 
-export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:/usr/local/go/bin
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias sr='cd ~/src'
 alias vp='v /home/gary/.vim/after/ftplugin/python.vim'
 alias vg='v /home/gary/.vim/after/ftplugin/go.vim'
