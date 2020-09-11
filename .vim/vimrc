@@ -1,0 +1,17 @@
+filetype plugin indent on
+syntax on
+set backspace=indent,eol,start
+set hidden
+set noswapfile
+set ttimeoutlen=50
+
+let $rtp=split(&runtimepath, ',')[0]
+let $RC="$HOME/.vim/vimrc"
+let mapleader =";"
+noremap ;; :w<cr>
+nmap ,, :bp<cr>
+nmap .. :bn<cr>
+nmap ss :source ~/.vimrc<cr>
+nmap @@ @:
+
+colo Tomorrow-Night
