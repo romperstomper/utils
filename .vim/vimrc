@@ -22,3 +22,7 @@ nmap <leader>v :vsplit<cr>
 nmap <leader>x `<cr> \| :only<cr>
 nmap <leader>b :Gblame<cr>
 nmap <leader>2 :!python %<cr>
+nmap <leader>3 :!python3 %<cr>
+nmap <leader>t :!python3 %<cr>
+nnoremap ;t :w\|:!python3 test_%<cr>
+
