@@ -11,9 +11,14 @@ let mapleader =";"
 noremap ;; :w<cr>
 nmap ,, :bp<cr>
 nmap .. :bn<cr>
-nmap ss :source ~/.vimrc<cr>
+nmap ;s :source ~/.vimrc<cr>
 nmap @@ @:
+nmap zz <esc>:w\|:!python3 %<cr>
 
 colo Tomorrow-Night
 au BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal! g'\"" | endif
-
+nmap ` <C-w><C-w>
+nmap <leader>v :vsplit<cr>
+nmap <leader>x `<cr> \| :only<cr>
+nmap <leader>b :Gblame<cr>
+nmap <leader>2 :!python %<cr>
