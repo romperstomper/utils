@@ -1,10 +1,12 @@
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
-Plug 'neoclide/coc.nvim', {'for': 'python', 'branch': 'release'}
-Plug 'davidhalter/jedi-vim',  {'for': 'python'}
-call plug#end()
+"call plug#begin('~/.vim/plugged')
+"Plug 'scrooloose/nerdtree'
+"Plug 'tpope/vim-fugitive'
+"Plug 'neoclide/coc.nvim', {'for': 'python', 'branch': 'release'}
+"Plug 'davidhalter/jedi-vim',  {'for': 'python'}
+"call plug#end()
 filetype plugin indent on
+setlocal shiftwidth=2
+setlocal softtabstop=2
 colo Tomorrow-Night
 set statusline=%F
 let mapleader =";"
