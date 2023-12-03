@@ -1,0 +1,6 @@
+sudo apt purge -y vim
+sudo apt install -y software-properaties common
+sudo apt update -y
+echo y |sudo add-apt-repository ppa:jonathonf/vim
+sudo apt install -y vim
+vim --version
