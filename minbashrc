@@ -1,0 +1,5 @@
+alias v=vim
+alias sagi="sudo apt install -y"
+alias sr="cd ~/src"
+alias ..="source ~/.bashrc"
+
