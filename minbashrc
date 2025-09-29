@@ -2,4 +2,7 @@ alias v=vim
 alias sagi="sudo apt install -y"
 alias sr="cd ~/src"
 alias ..="source ~/.bashrc"
-
+alias t=tmux
+alias g="git status"
+alias gc='git commit -m "update"' 
+alias gu="git push -u origin master"
