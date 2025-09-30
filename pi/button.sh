@@ -5,5 +5,4 @@ if ddcutil getvcp 60 | grep -q "0x11"; then
 else
 	DISP="0x11"
 fi
-
 ddcutil setvcp 60 $DISP --display 1
