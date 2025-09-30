@@ -1,0 +1,15 @@
+[Unit]
+Description=pi hdmi button input switch
+After=multi-user.target
+
+[Service]
+Type=simple
+
+User=root
+
+ExecStart=/usr/bin/python3 /home/gary/src/utils/pi/listenbutton.py
+
+[Install]
+WantedBy=multi-user.target
+
+
